@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vận dụng 1b bài 12</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .back-home:hover {
+      background-color: #4CAF50;
+      color: #ffffff;
+    }
+    form {
+      text-align: left;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff0000;
+      text-align: center;
+    }
+    .message.success {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Đăng kí thành viên câu lạc bộ ngoại khóa</h1>
+  <form id="registrationForm">
+    <fieldset>
+      <legend>ĐĂNG KÍ CÂU LẠC BỘ NGOẠI KHÓA TRƯỜNG NGUYỄN BỈNH KHIÊM</legend>
+      <p>Vui lòng nhập đầy đủ thông tin để đăng kí thành viên của CLB</p>
+      <ol>
+        <li>
+          <label for="fullname">Họ và tên:</label>
+          <br />
+          <input type="text" name="fullname" id="fullname" size="30" />
+        </li>
+        <li>
+          <label for="class">Lớp:</label>
+          <br />
+          <input type="text" name="class" list="class" id="class" />
+          <datalist id="class">
+            <option value="10A">10A</option>
+            <option value="10B">10B</option>
+            <option value="10C">10C</option>
+            <option value="10D">10D</option>
+            <option value="10E">10E</option>
+          </datalist>
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <br />
+          <input type="text" name="email" id="email" size="30" />
+        </li>
+        <li>
+          <label for="club">Lựa chọn CLB đăng kí:</label>
+          <select name="club" id="club">
+            <option value="">Chọn CLB</option>
+            <option value="football">CLB Bóng đá</option>
+            <option value="volleyball">CLB Bóng chuyền</option>
+            <option value="basketball">CLB Bóng rổ</option>
+            <option value="karatedo">CLB Karatedo</option>
+          </select>
+        </li>
+      </ol>
+      <input type="button" value="Đăng kí" onclick="validateForm()" />
+    </fieldset>
+  </form>
+  <div class="message" id="message"></div>
+  <div style="text-align: center;">
+   </div>
+
+  <script>
+    function validateForm() {
+      const fullname = document.getElementById("fullname").value.trim();
+      const classInput = document.getElementById("class").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const club = document.getElementById("club").value;
+      const message = document.getElementById("message");
+
+      if (!fullname || !classInput || !email || !club) {
+        message.textContent = "BẠN VUI LÒNG ĐIỀN ĐẦY ĐỦ THÔNG TIN";
+        message.className = "message error";
+      } else {
+        message.textContent = "BẠN ĐÃ ĐĂNG KÝ THÀNH CÔNG";
+        message.className = "message success";
+      }
+    }
+  </script>
+</body>
+</html>

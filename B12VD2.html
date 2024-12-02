@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vận dụng 2 bài 12</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #ffffff; /* Nền màu trắng */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh; /* Đảm bảo phần Quay về trang chủ ở cuối */
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left; /* Căn trái nội dung */
+    }
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    /* Căn giữa tiêu đề */
+    h2 {
+      text-align: center; /* Căn giữa tiêu đề */
+      color: #2980b9; /* Màu xanh dương cho tiêu đề */
+    }
+
+    /* Khung cho các liên kết */
+    .link-container {
+      display: flex;
+      justify-content: space-between; /* Các liên kết nằm trên một hàng */
+      border: 2px solid #2980b9; /* Khung màu xanh dương */
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 20px; /* Khoảng cách giữa khung và iframe */
+      background-color: #2980b9; /* Màu nền xanh dương cho khung */
+    }
+
+    .link-container a {
+      width: 30%; /* Đặt chiều rộng của mỗi liên kết thành 30% */
+      text-decoration: none;
+      color: #ffffff; /* Màu chữ trắng */
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .link-container a:hover {
+      color: #ffffff;
+      background-color: #3498db; /* Màu nền khi hover */
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+    /* Căn giữa iframe */
+    iframe {
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+    }
+
+    /* Nút quay về trang chủ */
+    .back-home {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      align-self: center; /* Căn giữa phần Quay về trang chủ */
+    }
+
+    .back-home:hover {
+      background-color: #4CAF50;
+      color: #ffffff;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <body>
+    <h2>Câu lạc bộ ngoại khóa Trường Nguyễn Bỉnh Khiêm</h2>
+    
+    <!-- Khung các liên kết -->
+    <div class="link-container">
+      <a href="B12VD2_CLBTHETHAO.html" target="iframe">Câu lạc bộ Thể thao</a>
+      <a href="B12VD2_CLBNGHETHUAT.html" target="iframe">Câu lạc bộ Nghệ thuật</a>
+      <a href="B12VD1copy.html" target="iframe">Đăng ký</a>
+    </div>
+
+    <br />
+    <iframe name="iframe" width="650" height="650"></iframe>
+
+    <!-- Nút Quay về trang chủ sẽ luôn ở dưới cùng -->
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+  </body>
+</html>

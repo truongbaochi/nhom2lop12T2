@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vận dụng bài 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff; /* Nền màu trắng */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* Căn trái nội dung */
+        }
+
+        .math-text {
+            font-size: 150%;
+            word-wrap: break-word; /* Đảm bảo văn bản không bị tràn ra ngoài */
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+
+        table {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        table ul {
+            font-size: large;
+        }
+
+        /* Căn giữa phần video YouTube */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td align="center" width="50%"><img src="tcn.png" width="50%" height="50%" align="center"></td>
+            <td width="50%">
+                <h1>Giới thiệu bản thân</h1>
+                <p>Xin chào tất cả mọi người! Em xin phép được giới thiệu đôi nét về bản thân mình. Em tên là Trần Châu
+                    Nguyên, sinh ra và lớn lên tại vùng đất Mỏ Cày Bắc, tỉnh Bến Tre – nơi gắn liền với những rặng dừa
+                    xanh bát ngát và con người chân chất, hiền hòa. Hiện tại, em đang là học sinh lớp 12 Toán Tin
+                    (Chuyên Toán 2) của trường THPT Chuyên Bến Tre. Đây là ngôi trường mà em rất tự hào khi được học tập
+                    và trưởng thành. Em yêu thích các môn học liên quan đến Toán và Sinh học, đồng thời luôn cố gắng
+                    không ngừng để khám phá thêm nhiều kiến thức mới. Hy vọng qua lời giới thiệu này, mọi người sẽ hiểu
+                    thêm về em và chúng ta sẽ có cơ hội cùng học hỏi, chia sẻ nhiều điều thú vị!</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Bài hát yêu thích</h2>
+
+                <!-- Căn giữa các video YouTube -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/kYQMv2HMaLk?si=X_9V_ebFVV_99oAX"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe src="https://www.youtube-nocookie.com/embed/Lli5E4AL0_s?si=z3u0KrT-cPirVzeZ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe src="https://www.youtube.com/embed/39f359c9XbI?si=bV45CphhBzqNRixA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <p>Cảm ơn bạn đã ghé thăm!</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Căn giữa phần "Quay về trang chủ" -->
+    <div style="text-align: center;">
+        <a href="index.html" class="back-home">Quay về trang chủ</a>
+    </div>
+</body>
+
+</html>
