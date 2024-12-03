@@ -5,80 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huỳnh Hoa Bách</title>
     <style>
+        /* Cấu trúc cơ bản */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
+
+        /* Tạo màu nền và căn giữa tiêu đề */
         .title {
-            font-size: 40px;
-            color: #FF6347; /* Màu cam sáng nổi bật */
+            font-size: 48px;
+            color: #FF6347; /* Màu cam nổi bật */
             text-align: center;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+
+        /* Căn giữa container */
         .container {
             display: flex;
-            justify-content: center; /* Căn giữa cột giới thiệu */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            padding: 0 10%;
+        }
+
+        /* Cải tiến bảng hình ảnh và tiểu sử */
+        .profile-table {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            align-items: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
-        .container img {
-            width: 25%; /* Cột ảnh chiếm 1/4 */
-            height: auto;
-            margin-right: 20px;
+
+        .profile-table img {
+            width: 80%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .info {
-            width: 75%;
-            text-align: center; /* Căn giữa nội dung trong bảng */
+
+        .profile-info h2 {
+            font-size: 32px;
+            color: #FF6347;
+            margin-bottom: 20px;
         }
-        .info p {
+
+        .profile-info ul {
+            list-style: none;
+            padding: 0;
             font-size: 18px;
+            line-height: 1.8;
         }
+
+        .profile-info ul li {
+            margin: 10px 0;
+        }
+
+        .profile-info ul li::before {
+            content: "•";
+            color: #FF6347;
+            margin-right: 10px;
+        }
+
+        /* Phần nội dung mô tả */
         .content {
             margin-top: 30px;
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .content img {
-            width: 60%;
-            height: auto;
-            margin-top: 20px;
+
+        .content p {
+            margin-bottom: 20px;
         }
+
+        /* Hiệu ứng hình ảnh */
+        .center-img {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .center-img img {
+            width: 70%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .center-img img:hover {
+            transform: scale(1.05);
+        }
+
+        .center-img p {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Phần liên kết Facebook */
         .info-left {
-            text-align: left;
+            text-align: center;
             margin-top: 30px;
             font-size: 18px;
         }
-        /* Phần Quay về trang chủ */
+
+        .info-left a {
+            color: #FF6347;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .info-left a:hover {
+            color: #d35400;
+        }
+
+        /* Phần quay về trang chủ */
+        .back-home-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
         .back-home {
             display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
+            padding: 15px 30px;
             background-color: #FF6347;
             color: white;
             text-decoration: none;
+            font-size: 20px;
             font-weight: bold;
-            border-radius: 5px;
-            text-align: center;
-            border: 2px solid #FF6347;
-            width: 200px;
-        }
-        .back-home:hover {
-            background-color: #FF4500;
-        }
-        /* Căn giữa và tô màu đỏ cho ảnh và chú thích */
-        .center-img {
-            text-align: center;
-            color: red;
-        }
-        /* Căn giữa phần quay về trang chủ */
-        .back-home-container {
-            text-align: center;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
         }
 
-        /* Tóm tắt tiểu sử phần chỉnh sửa */
-        .info ul {
-            font-size: 18px;
-            line-height: 1.6;
-            font-family: Arial, sans-serif;
+        .back-home:hover {
+            background-color: #FF4500;
         }
     </style>
 </head>
@@ -88,10 +161,12 @@
         Huỳnh Hoa Bách - Ngọn Lửa Kiên Cường Giữa Tâm Hồn Hài Hước
     </div>
 
-    <table align="center" style="width: 80%; margin-top: 20px;">
-        <tr>
-            <td align="center" width="50%"><img src="hhb.png" width="50%" height="auto" alt="Huỳnh Hoa Bách"></td>
-            <td width="100%" class="info">
+    <div class="container">
+        <div class="profile-table">
+            <div>
+                <img src="hhb.png" alt="Huỳnh Hoa Bách">
+            </div>
+            <div class="profile-info">
                 <h2>Tóm tắt tiểu sử</h2>
                 <ul>
                     <li>Họ tên: Huỳnh Hoa Bách</li>
@@ -102,44 +177,39 @@
                     <li>Sở thích: Chơi game</li>
                     <li>Ước mơ trở thành giáo viên</li>
                 </ul>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
 
-    <div class="content">
-        <p>
-            <strong>Huỳnh Hoa Bách</strong> – một cái tên đẹp từ ý nghĩa đến con người, luôn khiến mọi người không khỏi ngưỡng mộ và thích thú. “Huỳnh” tượng trưng cho ánh sáng vàng rực rỡ, tỏa sáng khắp nơi, tựa như năng lượng tích cực mà bạn mang lại. “Hoa” là biểu tượng của sự tinh khiết, trí tuệ và hương thơm lan tỏa, giống như tài năng và sự thông minh vượt trội của bạn trong học tập lẫn cuộc sống. Còn “Bách” – loài cây kiên cường, mạnh mẽ, biểu trưng cho sức sống mãnh liệt và ý chí không khuất phục, là hình ảnh hoàn hảo mô tả tinh thần không ngừng phấn đấu của Bách trên mọi hành trình.
-        </p>
-        <p>
-            Bách không chỉ mang một cái tên đẹp mà còn khiến nó trở nên ý nghĩa hơn qua từng hành động và thành tích. Là lớp trưởng lớp 12 Toán Tin, chuyên Toán 2 của trường THPT Chuyên Bến Tre, Bách gánh vác mọi trọng trách của lớp, là "linh hồn" trong mọi hoạt động, phong trào. Sự tin tưởng của thầy cô và tình cảm yêu quý từ bạn bè chính là minh chứng rõ ràng nhất cho sự xuất sắc của bạn trong vai trò thủ lĩnh.
-        </p>
-        <p>
-            Là học sinh chuyên Toán nhưng Bách lại dành một tình yêu đặc biệt cho môn Hóa, khiến mỗi bài học như một chuyến phiêu lưu tri thức đầy thú vị. Ẩn sau vẻ ngoài chăm chỉ là một "cao thủ" chơi game đích thực, nơi bạn tỏa sáng trong thế giới ảo. Không những vậy, Bách còn là một tín đồ thể thao chính hiệu, chơi thành thạo bóng đá, bóng chuyền và thậm chí suýt nữa “mém chưa đạt” môn bóng rổ. Dường như năng lượng của bạn là một dòng chảy bất tận, hòa quyện hoàn hảo giữa học tập và giải trí.
-        </p>
+        <div class="content">
+            <p>
+                <strong>Huỳnh Hoa Bách</strong> – một cái tên đẹp từ ý nghĩa đến con người, luôn khiến mọi người không khỏi ngưỡng mộ và thích thú. “Huỳnh” tượng trưng cho ánh sáng vàng rực rỡ, tỏa sáng khắp nơi, tựa như năng lượng tích cực mà bạn mang lại. “Hoa” là biểu tượng của sự tinh khiết, trí tuệ và hương thơm lan tỏa, giống như tài năng và sự thông minh vượt trội của bạn trong học tập lẫn cuộc sống. Còn “Bách” – loài cây kiên cường, mạnh mẽ, biểu trưng cho sức sống mãnh liệt và ý chí không khuất phục, là hình ảnh hoàn hảo mô tả tinh thần không ngừng phấn đấu của Bách trên mọi hành trình.
+            </p>
+            <p>
+                Bách không chỉ mang một cái tên đẹp mà còn khiến nó trở nên ý nghĩa hơn qua từng hành động và thành tích. Là lớp trưởng lớp 12 Toán Tin, chuyên Toán 2 của trường THPT Chuyên Bến Tre, Bách gánh vác mọi trọng trách của lớp, là "linh hồn" trong mọi hoạt động, phong trào. Sự tin tưởng của thầy cô và tình cảm yêu quý từ bạn bè chính là minh chứng rõ ràng nhất cho sự xuất sắc của bạn trong vai trò thủ lĩnh.
+            </p>
+            <p>
+                Là học sinh chuyên Toán nhưng Bách lại dành một tình yêu đặc biệt cho môn Hóa, khiến mỗi bài học như một chuyến phiêu lưu tri thức đầy thú vị. Ẩn sau vẻ ngoài chăm chỉ là một "cao thủ" chơi game đích thực, nơi bạn tỏa sáng trong thế giới ảo. Không những vậy, Bách còn là một tín đồ thể thao chính hiệu, chơi thành thạo bóng đá, bóng chuyền và thậm chí suýt nữa “mém chưa đạt” môn bóng rổ. Dường như năng lượng của bạn là một dòng chảy bất tận, hòa quyện hoàn hảo giữa học tập và giải trí.
+            </p>
+            <p>
+                Tuy nhiên, "thần đồng" Toán Tin của chúng ta không thiếu những nét đáng yêu và "khó đỡ". Đó là thói quen trì hoãn deadline, luôn đợi sát ngày mới bắt tay vào làm, khiến bạn bè nhiều phen dở khóc dở cười. Và đặc biệt, với âm nhạc – lĩnh vực từng khiến Bách phải thi lại hai lần, bạn lại biến nó thành câu chuyện hài hước, trở thành "truyền thuyết" mỗi khi lớp nhắc đến.
+            </p>
+            <p>
+                Dù vậy, với ước mơ trở thành giáo viên – bạn từng chia sẻ rằng bạn muốn làm một người giáo viên để mà "hành hạ" những thế hệ học trò kế tiếp - và tiếp nối các thế hệ thầy cô đời trước để dạy dỗ các thế hệ trẻ sau này. Bách vẫn luôn là một cá tính không lẫn vào đâu được. Tình trạng độc thân hiện tại chỉ khiến bạn càng thêm tập trung phát triển bản thân, là ngôi sao sáng giữa tập thể 12 Toán Tin và là niềm tự hào của trường THPT Chuyên Bến Tre. Huỳnh Hoa Bách – cái tên ấy, người ấy, mãi mãi là một dấu ấn khó phai trong lòng mọi người.
+            </p>
+        </div>
 
-        <!-- Căn giữa và tô màu đỏ cho ảnh và chú thích -->
         <div class="center-img">
             <img src="hhb5.png" alt="Cao thủ game – Huỳnh Hoa Bách">
             <p><em>Cao thủ game – Huỳnh Hoa Bách</em></p>
         </div>
 
-        <p>
-            Tuy nhiên, "thần đồng" Toán Tin của chúng ta không thiếu những nét đáng yêu và "khó đỡ". Đó là thói quen trì hoãn deadline, luôn đợi sát ngày mới bắt tay vào làm, khiến bạn bè nhiều phen dở khóc dở cười. Và đặc biệt, với âm nhạc – lĩnh vực từng khiến Bách phải thi lại hai lần, bạn lại biến nó thành câu chuyện hài hước, trở thành "truyền thuyết" mỗi khi lớp nhắc đến.
-        </p>
-        <p>
-            Dù vậy, với ước mơ trở thành giáo viên – bạn từng chia sẻ rằng bạn muốn làm một người giáo viên để mà "hành hạ" những thế hệ học trò kế tiếp - và tiếp nối các thế hệ thầy cô đời trước để dạy dỗ các thế hệ trẻ sau này. Bách vẫn luôn là một cá tính không lẫn vào đâu được. Tình trạng độc thân hiện tại chỉ khiến bạn càng thêm tập trung phát triển bản thân, là ngôi sao sáng giữa tập thể 12 Toán Tin và là niềm tự hào của trường THPT Chuyên Bến Tre. Huỳnh Hoa Bách – cái tên ấy, người ấy, mãi mãi là một dấu ấn khó phai trong lòng mọi người.
-        </p>
-    </div>
+        <div class="info-left">
+            <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/share/19hPsEZfex/" target="_blank">https://www.facebook.com/share/19hPsEZfex/</a></p>
+        </div>
 
-    <div class="info-left">
-        <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/share/19hPsEZfex/"
-" target="_blank">https://www.facebook.com/share/19hPsEZfex/
-</a></p>
-    </div>
-
-    <!-- Phần quay về trang chủ với căn giữa -->
-    <div class="back-home-container">
-        <a href="index.html" class="back-home">Quay về trang chủ</a>
+        <div class="back-home-container">
+            <a href="index.html" class="back-home">Quay về trang chủ</a>
+        </div>
     </div>
 
 </body>
