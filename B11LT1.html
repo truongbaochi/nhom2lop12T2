@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví Dụ HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .answer {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .list {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container .image-caption {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="header">Câu 1: Cho ảnh có kích thước gốc là 720x 450 Pixel chèn ảnh vào trang web bằng câu lệnh: 
+        <code>&lt;img src="images/1.png" alt="chiếc lá" width="600"&gt;</code>. Hỏi ảnh trong trang web có kích thước bao nhiêu?</div>
+    
+    <div class="answer">
+        <p>Trả lời:</p>
+        <p>Tỉ lệ kích thước của bức ảnh gốc là:</p>
+        <p><code>height / width = 450 / 720 = 5 / 8</code></p>
+        <p>Trong trang web, ảnh sẽ có kích thước là:</p>
+        <p><code>width = 600 (px)</code></p>
+        <p><code>height = 600 x 5/8 = 375 (px)</code></p>
+    </div>
+
+    <div class="footer">
+        <div class="button-container">
+            <a href="index.html" class="button">QUAY VỀ TRANG CHỦ</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
