@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví Dụ HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .answer {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .list {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .table-container table {
+            width: 100%;
+            border: 1px solid #4CAF50;
+            border-collapse: collapse;
+        }
+        .table-container th, .table-container td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #4CAF50;
+        }
+        .table-container th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .table-container td {
+            background-color: #f9f9f9;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="header">Câu 1: Trong các phần mềm soạn thảo văn bản thường có chức năng tạo các mẫu định dạng Style Sheet dùng để tạo khuôn cho các đoạn (paragraph) của văn bản. Em hãy trình bày sự giống nhau và tương thích của Style Sheet trong các phần mềm soạn thảo văn bản với CSS của trang web.</div>
+    
+    <div class="answer">
+        <p>Trả lời:</p>
+        <p><strong>*Mô hình Style Sheet trong các phần mềm soạn thảo văn bản nổi tiếng hiện nay chính là mô hình định dạng mà CSS kế thừa. Các tính năng của CSS hoàn toàn tương thích với mô hình Style Sheet có trong các phần mềm soạn thảo văn bản hiện đại:</strong></p>
+        <ul class="list">
+            <li>Thiết lập mẫu định dạng tại một nơi và có thể áp dụng nhiều vị trí của văn bản.</li>
+            <li>Rất thuận tiện cho việc định nghĩa và áp dụng vào văn bản.</li>
+            <li>Tạo được các văn bản có phong cách trình bày thống nhất.</li>
+            <li>Cho phép tự tạo ra các kiểu định dạng theo ý thích.</li>
+        </ul>
+
+        <p><strong>*Sự khác biệt giữa CSS với mô hình Style Sheet trong các phần mềm soạn thảo văn bản:</strong></p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cột 1 (CSS)</th>
+                        <th>Cột 2 (Style Sheet)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mỗi mẫu định dạng sẽ áp dụng cho các bộ chọn phần tử tương ứng.</td>
+                        <td>Tất cả các Style Sheet đều được áp dụng cho đối tượng paragraph.</td>
+                    </tr>
+                    <tr>
+                        <td>Mẫu định dạng không được đặt tên, mẫu định dạng sẽ áp dụng cho tất cả các phần tử được ghi trong bộ chọn của mình.</td>
+                        <td>Mỗi Style Sheet có tên riêng, khi áp dụng có thể chọn riêng từng Style Sheet độc lập để áp dụng.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="button-container">
+            <a href="index.html" class="button">QUAY VỀ TRANG CHỦ</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
