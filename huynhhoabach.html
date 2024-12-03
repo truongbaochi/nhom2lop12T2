@@ -48,9 +48,12 @@
             margin-top: 20px;
         }
 
+        /* Điều chỉnh ảnh bên trái sao cho phù hợp và có khung tròn */
         .profile-table img {
-            width: 100%; /* Đảm bảo ảnh đầy đủ trong cột */
-            border-radius: 8px;
+            width: auto;
+            height: 200px; /* Cân chỉnh lại chiều cao ảnh để phù hợp với nội dung */
+            border-radius: 50%; /* Làm ảnh tròn */
+            border: 5px solid #FF6347; /* Tạo khung màu cam quanh ảnh */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -165,7 +168,7 @@
         <div class="profile-table">
             <!-- Cột ảnh bên trái -->
             <div>
-                <img src="hhb.png" alt="Ảnh Huỳnh Hoa Bách" style="width: 100%; border-radius: 8px;">
+                <img src="hhb.png" alt="Ảnh Huỳnh Hoa Bách" style="width: auto; height: 200px; border-radius: 50%; border: 5px solid #FF6347;">
             </div>
             <!-- Cột thông tin bên phải -->
             <div class="profile-info">
