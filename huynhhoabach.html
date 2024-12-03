@@ -38,7 +38,7 @@
         .profile-table {
             width: 70%; /* Thu hẹp bảng xuống 70% */
             display: grid;
-            grid-template-columns: 2fr 1fr; /* Cột ảnh bên trái và cột thông tin bên phải */
+            grid-template-columns: 1fr 2fr; /* Đổi lại cột ảnh bên trái và cột thông tin bên phải */
             gap: 20px;
             align-items: center;
             background-color: #fff;
@@ -50,8 +50,8 @@
 
         /* Điều chỉnh ảnh bên trái sao cho phù hợp và có khung tròn */
         .profile-table img {
-            width: auto;
-            height: 200px; /* Cân chỉnh lại chiều cao ảnh để phù hợp với nội dung */
+            width: 150px; /* Giảm kích thước ảnh */
+            height: 150px; /* Giảm kích thước ảnh */
             border-radius: 50%; /* Làm ảnh tròn */
             border: 5px solid #FF6347; /* Tạo khung màu cam quanh ảnh */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -66,7 +66,7 @@
         /* Sử dụng padding-left để thụt các dòng trong bảng */
         .profile-info ul {
             list-style: none;
-            padding-left: 5px; /* Thụt vào */
+            padding-left: 10px; /* Giảm khoảng cách trái */
             font-size: 18px;
             line-height: 1.8;
         }
@@ -160,6 +160,7 @@
     </style>
 </head>
 <body>
+
 
     <div class="title">
         Huỳnh Hoa Bách - Ngọn Lửa Kiên Cường Giữa Tâm Hồn Hài Hước
