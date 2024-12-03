@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ví Dụ HTML</title>
+    <title>Bài 7 - Vận dụng - Câu 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,27 +27,36 @@
             font-size: 1.1em;
             margin-top: 10px;
         }
-        .list {
-            margin: 10px 0;
-            padding-left: 20px;
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
-        .image-container {
-            margin-top: 20px;
+        .image-table {
+            border: 2px solid red;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            width: 48%; /* Chiếm 48% chiều rộng, tạo khoảng cách giữa các bảng */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .image-container .image-caption {
+        .image-table td {
+            text-align: center;
+            padding: 10px;
+        }
+        .image-caption {
             font-size: 1.1em;
             font-weight: bold;
             color: red;
             margin-top: 10px;
-            text-align: center;
         }
-        .image-container img {
-            width: 100%;
-            max-width: 500px;
-            margin: 10px 0;
+        .image-table img {
+            max-width: 100%;
+            height: auto;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
         .footer {
             margin-top: 20px;
@@ -74,25 +83,70 @@
     
     <div class="answer">
         <p>Trả lời:</p>
-        <div class="image-container">
-            <div class="image-caption">1. W3Schools</div>
-            <img src="https://www.w3schools.com/plus/img_noads.png" alt="W3Schools">
+        
+        <!-- Hàng 1 -->
+        <div class="row">
+            <table class="image-table">
+                <tr>
+                    <td><div class="image-caption">1. W3Schools</div></td>
+                </tr>
+                <tr>
+                    <td><img src="w3schools.png" alt="W3Schools"></td>
+                </tr>
+            </table>
             
-            <div class="image-caption">2. Similar Web</div>
-            <img src="https://site-images.similarcdn.com/image?url=onlinehtmleditor.dev&t=1&s=1&h=970a4ce7924356d76ae276b012169982c00e7796822cde625d6c689314292233" alt="Similar Web">
-            
-            <div class="image-caption">3. HTML Code Editor</div>
-            <img src="https://html-online.com/articles/wp-content/uploads/2016/01/html-code-editor-instant-converter.jpg" alt="HTML Code Editor">
-            
-            <div class="image-caption">4. JSFiddle</div>
-            <img src="https://user-images.githubusercontent.com/64213093/117741688-3ff83380-b1c0-11eb-9422-37b3221a8f06.png" alt="JSFiddle">
-            
-            <div class="image-caption">5. Replit</div>
-            <img src="https://replit.com/public/images/ogBanner.png" alt="Replit">
-            
-            <div class="image-caption">6. Visual Studio Code</div>
-            <img src="https://code.visualstudio.com/assets/docs/getstarted/userinterface/hero.png" alt="Visual Studio Code">
+            <table class="image-table">
+                <tr>
+                    <td><div class="image-caption">2. Online HTML Editor</div></td>
+                </tr>
+                <tr>
+                    <td><img src="htmleditor.html" alt="Online HTML Editor"></td>
+                </tr>
+            </table>
         </div>
+        
+        <!-- Hàng 2 -->
+        <div class="row">
+            <table class="image-table">
+                <tr>
+                    <td><div class="image-caption">3. HTML Code Editor</div></td>
+                </tr>
+                <tr>
+                    <td><img src="codeeditor.png" alt="HTML Code Editor"></td>
+                </tr>
+            </table>
+            
+            <table class="image-table">
+                <tr>
+                    <td><div class="image-caption">4. JSFiddle</div></td>
+                </tr>
+                <tr>
+                    <td><img src="jsfiddle.png" alt="JSFiddle"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Hàng 3 -->
+        <div class="row">
+            <table class="image-table">
+                <tr>
+                    <td><div class="image-caption">5. Replit</div></td>
+                </tr>
+                <tr>
+                    <td><img src="replit.png" alt="Replit"></td>
+                </tr>
+            </table>
+            
+            <table class="image-table">
+                <tr>
+                    <td><div class="image-caption">6. Visual Studio Code</div></td>
+                </tr>
+                <tr>
+                    <td><img src="vscode.png" alt="Visual Studio Code"></td>
+                </tr>
+            </table>
+        </div>
+        
     </div>
 
     <div class="footer">
