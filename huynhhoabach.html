@@ -38,7 +38,7 @@
         .profile-table {
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 1fr; /* Cột ảnh bên trái và cột thông tin bên phải */
             gap: 20px;
             align-items: center;
             background-color: #fff;
@@ -49,8 +49,8 @@
         }
 
         .profile-table img {
-            width: 80%;
-            border-radius: 50%;
+            width: 100%; /* Đảm bảo ảnh đầy đủ trong cột */
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -163,9 +163,11 @@
 
     <div class="container">
         <div class="profile-table">
+            <!-- Cột ảnh bên trái -->
             <div>
-                <img src="hhb.png" alt="Huỳnh Hoa Bách">
+                <img src="hhb.png" alt="Ảnh Huỳnh Hoa Bách" style="width: 100%; border-radius: 8px;">
             </div>
+            <!-- Cột thông tin bên phải -->
             <div class="profile-info">
                 <h2>Tóm tắt tiểu sử</h2>
                 <ul>
@@ -193,21 +195,22 @@
             <p>
                 Tuy nhiên, "thần đồng" Toán Tin của chúng ta không thiếu những nét đáng yêu và "khó đỡ". Đó là thói quen trì hoãn deadline, luôn đợi sát ngày mới bắt tay vào làm, khiến bạn bè nhiều phen dở khóc dở cười. Và đặc biệt, với âm nhạc – lĩnh vực từng khiến Bách phải thi lại hai lần, bạn lại biến nó thành câu chuyện hài hước, trở thành "truyền thuyết" mỗi khi lớp nhắc đến.
             </p>
-                    <div class="center-img">
-            <img src="hhb5.png" alt="Cao thủ game – Huỳnh Hoa Bách">
-            <p><em>Cao thủ game – Huỳnh Hoa Bách</em></p>
-        </div>
             <p>
                 Dù vậy, với ước mơ trở thành giáo viên – bạn từng chia sẻ rằng bạn muốn làm một người giáo viên để mà "hành hạ" những thế hệ học trò kế tiếp - và tiếp nối các thế hệ thầy cô đời trước để dạy dỗ các thế hệ trẻ sau này. Bách vẫn luôn là một cá tính không lẫn vào đâu được. Tình trạng độc thân hiện tại chỉ khiến bạn càng thêm tập trung phát triển bản thân, là ngôi sao sáng giữa tập thể 12 Toán Tin và là niềm tự hào của trường THPT Chuyên Bến Tre. Huỳnh Hoa Bách – cái tên ấy, người ấy, mãi mãi là một dấu ấn khó phai trong lòng mọi người.
             </p>
         </div>
 
-
+        <!-- Căn giữa và tô màu đỏ cho ảnh và chú thích -->
+        <div class="center-img">
+            <img src="hhb5.png" alt="Cao thủ game – Huỳnh Hoa Bách">
+            <p><em>Cao thủ game – Huỳnh Hoa Bách</em></p>
+        </div>
 
         <div class="info-left">
             <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/share/19hPsEZfex/" target="_blank">https://www.facebook.com/share/19hPsEZfex/</a></p>
         </div>
 
+        <!-- Quay về trang chủ -->
         <div class="back-home-container">
             <a href="index.html" class="back-home">Quay về trang chủ</a>
         </div>
