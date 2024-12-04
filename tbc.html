@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trương Bảo Chi</title>
+    <style>
+        /* Cấu trúc cơ bản */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Tạo màu nền và căn giữa tiêu đề */
+        .title {
+            font-size: 48px;
+            color: #FF6347; /* Màu cam nổi bật */
+            text-align: center;
+            font-weight: bold;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Căn giữa container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            padding: 0 10%;
+        }
+
+        /* Cải tiến bảng hình ảnh và tiểu sử */
+        .profile-table {
+            width: 45%; /* Thu hẹp bảng xuống 45% */
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Đổi lại cột ảnh bên trái và cột thông tin bên phải */
+            gap: 20px;
+            align-items: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        /* Điều chỉnh ảnh bên trái sao cho phù hợp và có khung tròn */
+        .profile-table img {
+            width: 150px; /* Giảm kích thước ảnh */
+            height: 150px; /* Giảm kích thước ảnh */
+            border-radius: 50%; /* Làm ảnh tròn */
+            border: 5px solid #FF6347; /* Tạo khung màu cam quanh ảnh */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info h2 {
+            font-size: 32px;
+            color: #FF6347;
+            margin-bottom: 20px;
+        }
+
+        /* Sử dụng padding-left để thụt các dòng trong bảng */
+        .profile-info ul {
+            list-style: none;
+            padding-left: 10px; /* Giảm khoảng cách trái */
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .profile-info ul li {
+            margin: 10px 0;
+        }
+
+        .profile-info ul li::before {
+            content: "•";
+            color: #FF6347;
+            margin-right: 10px;
+        }
+
+        /* Phần nội dung mô tả */
+        .content {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        /* Hiệu ứng hình ảnh */
+        .center-img {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .center-img img {
+            width: 70%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .center-img img:hover {
+            transform: scale(1.05);
+        }
+
+        .center-img p {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Phần liên kết Facebook */
+        .info-left {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .info-left a {
+            color: #FF6347;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .info-left a:hover {
+            color: #d35400;
+        }
+
+        /* Phần quay về trang chủ */
+        .back-home-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-home {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #FF6347;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="title">
+Trương Bảo Chí – Ngọn Hải Đăng Tỏa Sáng Giữa Đại Dương Tri Thức
+    </div>
+
+    <div class="container">
+        <div class="profile-table">
+            <!-- Cột ảnh bên trái -->
+            <div>
+                <img src="tbc0.png" alt="Ảnh Trương Bảo Chí" style="width: auto; height: 200px; border-radius: 50%; border: 5px solid #FF6347;">
+            </div>
+            <!-- Cột thông tin bên phải -->
+            <div class="profile-info">
+                <h2>Tóm tắt tiểu sử</h2>
+                <ul>
+                    <li>Họ tên: Trương Bảo Chí</li>
+                    <li>Ngày sinh: 05/01/2007</li>
+                    <li>Quê quán: Châu Thành, Bến Tre</li>
+                    <li>Học tại: Trường THPT Chuyên Bến Tre</li>
+                    <li>Môn học yêu thích: Toán, Vật lí</li>
+                    <li>Sở thích: Xem phim</li>
+                    <li>Ước mơ trở thành giáo viên</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Tựa như một báu vật giữa đời thường, cái tên Trương Bảo Chí đã gói trọn sự kỳ vọng và tình yêu thương của gia đình. "Bảo" – viên ngọc quý, sáng lấp lánh trong lòng mọi người. "Chí" – ý chí kiên định, niềm khát khao vươn tới những đỉnh cao tri thức. Tên gọi ấy không chỉ đơn thuần là một danh xưng mà còn là ngọn lửa thôi thúc bạn vượt qua mọi khó khăn, trở thành một người dẫn đường đầy trách nhiệm và đam mê.  
+            </p>
+            <p>
+                Sinh ra giữa xứ dừa thanh bình, Bảo Chí mang trong mình khí chất hiền hòa nhưng không kém phần độc đáo. Là học sinh lớp 12 Toán Tin, chuyên Toán 2 của trường THPT Chuyên Bến Tre, bạn không chỉ là niềm tự hào của tập thể mà còn là người mang đến những sắc màu tươi mới và đong đầy yêu thương. 
+            </p>
+        <div class="center-img">
+            <img src="tbc1.png" alt="Ảnh 1">
+            <p><em>Tập thể lớp 12TT</em></p>
+        </div>
+            <p>
+               Chí không chỉ học Toán và Lý – bạn sống cùng chúng. Với Toán học, đó là những mê cung logic đầy hấp dẫn, nơi bạn thỏa sức vẽ nên bức tranh của những định lý bất biến. Với Vật lý, bạn lại hóa thân thành nhà thám hiểm khám phá những bí mật của tự nhiên, như ánh sáng truyền qua lăng kính, vũ trụ xoay vần qua những định luật. Mỗi bài toán, mỗi thí nghiệm đều là một mảnh ghép thú vị trong cuộc hành trình chinh phục tri thức bất tận. 
+            </p>
+
+            <p>
+               Ước mơ của bạn thật độc đáo: trở thành một giáo viên Toán. Nhưng đây không phải là một giáo viên bình thường – bạn muốn "hành hạ" học sinh bằng những bài kiểm tra đầy thử thách. Tuy vậy, ẩn sau sự hài hước đó là tấm lòng của một người luôn mong muốn thế hệ trẻ trưởng thành qua những bài toán hóc búa, rèn luyện tư duy sắc bén và nuôi dưỡng tinh thần không ngừng cố gắng. Một nét đặc trưng của bạn chính là niềm đam mê sưu tầm tài liệu học tập. Bạn dành hàng giờ để lục lọi những kho tàng tri thức, thu thập từng bài giảng, từng đề thi quý giá như một nhà khảo cổ tìm kiếm báu vật. Nhưng không chỉ dừng lại ở học thuật, bạn còn bị cuốn hút bởi những điều mới lạ trong cuộc sống, luôn tò mò và hào hứng với những khám phá độc đáo mà ít ai để ý.
+        <div class="center-img">
+            <img src="tbc2.png" alt="Ảnh 2">
+            <p><em>Thư viện học liệu</em></p>
+        </div>
+            </p>
+    
+            <p>
+              Chí là sự hòa quyện độc đáo giữa dễ tính và khó tính. Bạn dễ dàng đồng cảm, tạo không khí thoải mái với mọi người, nhưng cũng rất nghiêm khắc khi đứng trước công việc. Đặc biệt, Bảo Chí không thể dung thứ cho sự trì hoãn và thiếu trách nhiệm – những ai "quên chạy deadline" đều sẽ phải đối mặt với ánh mắt nghiêm nghị nhưng đầy tâm huyết của bạn. Qua đó, ta thấy được hình ảnh của một cá nhân đầy đam mê, nhiệt huyết, và nguyên tắc. Làm việc cùng bạn, người ta vừa thấy vui vẻ, vừa cảm nhận được sự thúc đẩy mạnh mẽ để vượt qua giới hạn của bản thân. Bạn không chỉ là một người bạn, một người đồng đội, mà còn là nguồn cảm hứng bất tận cho những ai khao khát khám phá tri thức và chính mình. 
+            </p>
+
+
+        <div class="info-left">
+            <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/profile.php?id=100072425097206&mibextid=ZbWKwL" target="_blank">https://www.facebook.com/profile.php?id=100072425097206&mibextid=ZbWKwL</a></p>
+        </div>
+
+        <!-- Quay về trang chủ -->
+        <div class="back-home-container">
+            <a href="index.html" class="back-home">Quay về trang chủ</a>
+        </div>
+    </div>
+
+</body>
+</html>
