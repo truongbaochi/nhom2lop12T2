@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Châu Nguyên</title>
+    <style>
+        /* Cấu trúc cơ bản */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Tạo màu nền và căn giữa tiêu đề */
+        .title {
+            font-size: 48px;
+            color: #FF6347; /* Màu cam nổi bật */
+            text-align: center;
+            font-weight: bold;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Căn giữa container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            padding: 0 10%;
+        }
+
+        /* Cải tiến bảng hình ảnh và tiểu sử */
+        .profile-table {
+            width: 45%; /* Thu hẹp bảng xuống 45% */
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Đổi lại cột ảnh bên trái và cột thông tin bên phải */
+            gap: 20px;
+            align-items: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        /* Điều chỉnh ảnh bên trái sao cho phù hợp và có khung tròn */
+        .profile-table img {
+            width: 150px; /* Giảm kích thước ảnh */
+            height: 150px; /* Giảm kích thước ảnh */
+            border-radius: 50%; /* Làm ảnh tròn */
+            border: 5px solid #FF6347; /* Tạo khung màu cam quanh ảnh */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info h2 {
+            font-size: 32px;
+            color: #FF6347;
+            margin-bottom: 20px;
+        }
+
+        /* Sử dụng padding-left để thụt các dòng trong bảng */
+        .profile-info ul {
+            list-style: none;
+            padding-left: 10px; /* Giảm khoảng cách trái */
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .profile-info ul li {
+            margin: 10px 0;
+        }
+
+        .profile-info ul li::before {
+            content: "•";
+            color: #FF6347;
+            margin-right: 10px;
+        }
+
+        /* Phần nội dung mô tả */
+        .content {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        /* Hiệu ứng hình ảnh */
+        .center-img {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .center-img img {
+            width: 70%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .center-img img:hover {
+            transform: scale(1.05);
+        }
+
+        .center-img p {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Phần liên kết Facebook */
+        .info-left {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .info-left a {
+            color: #FF6347;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .info-left a:hover {
+            color: #d35400;
+        }
+
+        /* Phần quay về trang chủ */
+        .back-home-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-home {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #FF6347;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="title">
+        Trần Châu Nguyên – Viên Ngọc Giữa Miền Đồng Bằng và Ước Mơ Tỏa Sáng
+    </div>
+
+    <div class="container">
+        <div class="profile-table">
+            <!-- Cột ảnh bên trái -->
+            <div>
+                <img src="tcn0.png" alt="Ảnh Trần Châu Nguyên" style="width: auto; height: 200px; border-radius: 50%; border: 5px solid #FF6347;">
+            </div>
+            <!-- Cột thông tin bên phải -->
+            <div class="profile-info">
+                <h2>Tóm tắt tiểu sử</h2>
+                <ul>
+                    <li>Họ tên: Trần Châu Nguyên</li>
+                    <li>Ngày sinh: 07/02/2007</li>
+                    <li>Quê quán: Mỏ Cày Bắc, Bến Tre</li>
+                    <li>Học tại: Trường THPT Chuyên Bến Tre</li>
+                    <li>Môn học yêu thích: Toán, Sinh học</li>
+                    <li>Sở thích: Nghe nhạc</li>
+                    <li>Ước mơ trở thành bác sĩ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Tựa một viên ngọc quý được mài giũa từ vùng đất phì nhiêu Mỏ Cày Bắc, cái tên <strong>Trần Châu Nguyên</strong> vang lên với vẻ đẹp đậm chất thơ và chứa chan ý nghĩa. “Trần” như dòng họ lâu đời, gợi về cội nguồn vững chãi, là gốc rễ của những giá trị gia đình thiêng liêng. “Châu” mang hình ảnh của ngọc ngà chói sáng, vừa tinh khiết vừa kiêu hãnh, tượng trưng cho phẩm chất cao quý và trí tuệ vượt trội. “Nguyên” lại là sự bao la, mênh mông của đồng bằng, là nơi gieo mầm hy vọng, ấp ủ những khát vọng lớn lao. Cái tên ấy như một bản giao hòa giữa sự cao quý và hoài bão, gửi gắm niềm tin vào một tương lai rực rỡ.  
+            </p>
+            <p>
+                Sinh ra giữa xứ dừa thanh bình, Châu Nguyên mang trong mình khí chất hiền hòa nhưng không kém phần độc đáo. Là học sinh lớp 12 Toán Tin, chuyên Toán 2 của trường THPT Chuyên Bến Tre, bạn không chỉ là niềm tự hào của tập thể mà còn là người mang đến những sắc màu tươi mới, dí dỏm, và đong đầy yêu thương.  
+            </p>
+        <div class="center-img">
+            <img src="tcn1.png" alt="Ảnh: Đà Lạt">
+            <p><em>Huỳnh Hoa Bách và những người đàn ông 12TT</em></p>
+        </div>
+            <p>
+               Nguyên yêu Toán, say mê Sinh – hai môn học tưởng chừng khô khan nhưng lại mở ra trước mắt bạn những chân trời tri thức kỳ thú. Và thật thú vị khi môn tiếng Anh trở thành "dấu ấn" không thể nhầm lẫn của bạn, bởi mỗi bài kiểm tra đều là một hành trình "tiệm cận 6.5" đầy hài hước, khiến cả lớp phải cười nghiêng ngả.  
+            </p>
+
+            <p>
+                Không chỉ là một học sinh ưu tú, Nguyên còn sở hữu năng lượng tràn đầy của một vận động viên đa năng. Từ bóng đá, bóng chuyền cho đến đá cầu, bạn đều chứng tỏ tài năng vượt trội, tuy nhiên bộ môn bóng rổ lại là một câu chuyện "đầy kịch tính" khi bạn từng suýt "mém chưa đạt". Nhưng ngay cả những "thất bại nhỏ" ấy cũng chẳng thể làm lu mờ chiều cao nổi bật và tinh thần thể thao mãnh liệt của bạn. Điểm đáng yêu của Châu Nguyên không chỉ dừng lại ở tài năng mà còn ở những nét "không hoàn hảo" đầy thú vị. Chữ viết của bạn – một tác phẩm "trừu tượng" đúng nghĩa – đã trở thành đề tài bất tận để cả lớp cùng nhau bật cười. Dẫu vậy, sự hòa đồng, hài hước và thân thiện của bạn mới chính là điều khiến mọi người yêu mến. Châu Nguyên không chỉ là "chú hề" mang đến niềm vui mà còn là người bạn chân thành, sẵn sàng san sẻ và gắn kết tất cả mọi người.
+        <div class="center-img">
+            <img src="tcn2.png" alt="Những khoảnh khắc hài hước của Trần Châu Nguyên">
+            <p><em>Những khoảnh khắc hài hước của Trần Châu Nguyê</em></p>
+        </div>
+            </p>
+    
+            <p>
+              Với ước mơ trở thành bác sĩ, bạn đang ấp ủ khát vọng cao đẹp: chữa lành nỗi đau, mang hy vọng đến những tâm hồn tổn thương. Con đường ấy tuy dài và lắm gian nan, nhưng với bản lĩnh, sự kiên trì và tính cách luôn nhìn đời bằng nụ cười, Châu Nguyên chắc chắn sẽ bước đi một cách vững vàng và mạnh mẽ, mang theo ánh sáng của lòng nhân ái và tri thức. *Trần Châu Nguyên** – một con người tài hoa, một trái tim nhiệt huyết, một ngọn gió mát lành giữa tập thể 12 Toán Tin. Tên bạn, người bạn, như ánh sáng dịu dàng của viên ngọc quý, sẽ mãi tỏa rạng trong ký ức của tất cả những ai từng may mắn đồng hành cùng bạn.
+            </p>
+
+
+        <div class="info-left">
+            <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/cn.tran.718?mibextid=ZbWKwL" target="_blank">https://www.facebook.com/cn.tran.718?mibextid=ZbWKwL</a></p>
+        </div>
+
+        <!-- Quay về trang chủ -->
+        <div class="back-home-container">
+            <a href="index.html" class="back-home">Quay về trang chủ</a>
+        </div>
+    </div>
+
+</body>
+</html>
