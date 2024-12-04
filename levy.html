@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Trần Phương Vy</title>
+    <style>
+        /* Cấu trúc cơ bản */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Tạo màu nền và căn giữa tiêu đề */
+        .title {
+            font-size: 48px;
+            color: #FF6347; /* Màu cam nổi bật */
+            text-align: center;
+            font-weight: bold;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Căn giữa container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            padding: 0 10%;
+        }
+
+        /* Cải tiến bảng hình ảnh và tiểu sử */
+        .profile-table {
+            width: 45%; /* Thu hẹp bảng xuống 45% */
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Đổi lại cột ảnh bên trái và cột thông tin bên phải */
+            gap: 20px;
+            align-items: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        /* Điều chỉnh ảnh bên trái sao cho phù hợp và có khung tròn */
+        .profile-table img {
+            width: 100px; /* Giảm kích thước ảnh */
+            height: 100px; /* Giảm kích thước ảnh */
+            border-radius: 100%; /* Làm ảnh tròn */
+            border: 5px solid #FF6347; /* Tạo khung màu cam quanh ảnh */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info h2 {
+            font-size: 32px;
+            color: #FF6347;
+            margin-bottom: 20px;
+        }
+
+        /* Sử dụng padding-left để thụt các dòng trong bảng */
+        .profile-info ul {
+            list-style: none;
+            padding-left: 10px; /* Giảm khoảng cách trái */
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .profile-info ul li {
+            margin: 10px 0;
+        }
+
+        .profile-info ul li::before {
+            content: "•";
+            color: #FF6347;
+            margin-right: 10px;
+        }
+
+        /* Phần nội dung mô tả */
+        .content {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        /* Hiệu ứng hình ảnh */
+        .center-img {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .center-img img {
+            width: 70%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .center-img img:hover {
+            transform: scale(1.05);
+        }
+
+        .center-img p {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Phần liên kết Facebook */
+        .info-left {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .info-left a {
+            color: #FF6347;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .info-left a:hover {
+            color: #d35400;
+        }
+
+        /* Phần quay về trang chủ */
+        .back-home-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-home {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #FF6347;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="title">
+Lê Trần Phương Vy - Bông Hoa Tỏa Sáng Giữa Lớp 12 Toán Tin
+    </div>
+
+    <div class="container">
+        <div class="profile-table">
+            <!-- Cột ảnh bên trái -->
+            <div>
+                <img src="levy0.png" alt="Ảnh Lê Trần Phương Vy" style="width: auto; height: 200px; border-radius: 50%; border: 5px solid #FF6347;">
+            </div>
+            <!-- Cột thông tin bên phải -->
+            <div class="profile-info">
+                <h2>Tóm tắt tiểu sử</h2>
+                <ul>
+                    <li>Họ tên: Lê Trần Phương Vy</li>
+                    <li>Ngày sinh: 25/06/2007</li>
+                    <li>Quê quán: Bình Đại, Bến Tre</li>
+                    <li>Học tại: Trường THPT Chuyên Bến Tre</li>
+                    <li>Môn học yêu thích: Toán, Tiếng Anh</li>
+                    <li>Sở thích: Xem phim</li>
+                    <li>Đam mê: Công nghệ thông tin</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Tựa như một bản nhạc dịu dàng, cái tên Lê Trần Phương Vy ẩn chứa cả một trời ý nghĩa. "Phương" – hướng đi cao đẹp, luôn mang theo sự hy vọng và khát vọng vươn xa. "Vy" – loài hoa nhỏ bé nhưng thanh tao, vươn mình tỏa hương trong nắng mai. Tên gọi ấy không chỉ là sự kết hợp của dịu dàng và mạnh mẽ mà còn là lời gửi gắm yêu thương, mong rằng bạn sẽ luôn là ánh sáng dẫn lối trên con đường thành công.  
+            </p>
+            <p>
+                Sinh ra và lớn lên trên mảnh đất Bình Đại yên bình, Phương Vy mang trong mình vẻ đẹp dung dị của miền quê sông nước và cả sự cứng cỏi từ những cơn gió mặn mà của biển cả. Vùng đất ấy không chỉ nuôi dưỡng tâm hồn bạn mà còn là nơi bắt đầu những ước mơ lớn, nơi trái tim bạn đập rộn ràng với những hoài bão tuổi trẻ. Phương Vy không chỉ là bông hoa của riêng mình mà còn là ánh sáng rực rỡ trong tập thể. Với sự nhiệt huyết và năng động, bạn đã đóng góp không ít vào các phong trào của lớp, giúp lớp học trở nên sôi động hơn, gắn kết hơn. Bạn là người đứng sau những ý tưởng sáng tạo và những khoảnh khắc đáng nhớ, khiến mọi người càng thêm yêu mến tập thể 12 Toán Tin.
+            </p>
+        <div class="center-img">
+            <img src="levy1.png" alt="Ảnh 1">
+            <p><em>Ảnh: Những bông hoa của lớp 12 Toán Tin</em></p>
+        </div>
+            <p>
+               Trong bạn, niềm đam mê công nghệ thông tin không ngừng cháy bỏng. Phương Vy tin rằng công nghệ chính là chìa khóa mở ra tương lai, nơi bạn sẽ xây dựng những điều kỳ diệu bằng tư duy sắc bén và sự chăm chỉ không ngừng nghỉ. Bạn đã tự nhủ rằng: "Mỗi bước đi hôm nay đều sẽ đưa mình đến gần hơn với giấc mơ lớn ấy."
+            </p>
+
+            <p>
+               Trên con đường chinh phục ước mơ, Phương Vy là hình mẫu của sự kiên trì và quyết tâm. Bạn không ngần ngại đối mặt với thử thách, bởi bạn tin rằng mỗi khó khăn là một bước đệm để trưởng thành. Với Phương Vy, tương lai không phải là đích đến xa vời mà là một hành trình đẹp, nơi bạn sẽ tiếp tục tỏa sáng bằng chính nỗ lực và trái tim đầy nhiệt huyết.
+        <div class="center-img">
+            <img src="levy2.png" alt="Ảnh 2">
+            <p><em>Công nghệ thông tin</em></p>
+        </div>
+            </p>
+    
+            <p>
+              Bạn là hiện thân của vẻ đẹp và trí tuệ, là bông hoa rực rỡ trong tập thể 12 Toán Tin. Với sự dịu dàng, gần gũi và quyết tâm vươn xa, Lê Trần Phương Vy không chỉ để lại dấu ấn trong lòng bạn bè mà còn là nguồn cảm hứng lớn lao cho những ai may mắn đồng hành cùng bạn. Tương lai, chắc chắn, sẽ là nơi tên bạn được khắc ghi như một biểu tượng của ý chí và thành công!  
+            </p>
+
+
+        <div class="info-left">
+            <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/profile.php?id=100075189285717&mibextid=ZbWKwL" target="_blank">https://www.facebook.com/profile.php?id=100075189285717&mibextid=ZbWKwL</a></p>
+        </div>
+
+        <!-- Quay về trang chủ -->
+        <div class="back-home-container">
+            <a href="index.html" class="back-home">Quay về trang chủ</a>
+        </div>
+    </div>
+
+</body>
+</html>
