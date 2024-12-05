@@ -8,70 +8,116 @@
     <link rel="stylesheet" href="B13VD2.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
             margin: 0;
-            padding: 20px;
-            background-color: #ffffff; /* Nền màu trắng */
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left; /* Căn trái nội dung */
-        }
-        h1 {
-            font-size: 24px;
-            color: #333;
-        }
-        .back-home {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: 2px solid #4CAF50;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #4CAF50;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        .back-home:hover {
-            background-color: #4CAF50;
-            color: #ffffff;
-        }
-        p {
-            margin-bottom: 10px;
+            padding: 0;
+            background-color: #f4f7fc; /* Nền sáng với màu nhẹ */
         }
 
-        /* Đóng khung và căn giữa cho phần "Quay về trang chủ" */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Màu bóng nhẹ tạo chiều sâu */
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #ecf0f1; /* Thêm đường kẻ dưới cho tiêu đề */
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #3498db;
+            margin-top: 30px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        a {
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            background-color: #2980b9;
+            padding: 12px 30px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #3498db;
+            transform: translateY(-3px); /* Hiệu ứng nâng lên khi hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+        }
+
         .back-home-container {
             text-align: center;
-            margin-top: 20px; /* Thêm khoảng cách trên */
+            margin-top: 40px;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .step-list {
+            padding-left: 20px;
+            list-style-type: decimal;
+        }
+
+        .step-list li {
+            margin-bottom: 12px;
+        }
+
+        /* Hiệu ứng gradient cho container */
+        .container {
+            background: linear-gradient(145deg, #ffffff, #f0f7fc);
+        }
+
+        /* Hiệu ứng cho các đoạn văn bản */
+        p, h2 {
+            transition: color 0.3s ease;
+        }
+
+        p:hover, h2:hover {
+            color: #2980b9; /* Đổi màu khi hover */
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="title">Lịch sử CSS</h1>
+        <h1>Lịch sử CSS</h1>
         <p>Ý tưởng của CSS do kỹ sư Hakon Wium Lie, người Na Uy thiết lập năm 1994 trong khi làm việc với Tim
             Berners-Lee tại viện hạt nhân CERN.</p>
         <p>Ý tưởng của CSS là tạo ra các mẫu định dạng riêng, độc lập cho các phần tử HTML của trang web. Cách tạo ngôn
             ngữ định dạng riêng này sẽ giúp ích rất nhiều nếu so sánh với việc định dạng theo từng thẻ HTML.</p>
-        <h2 class="subtitle">Lịch sử các phiên bản CSS đầu tiên</h2>
+        <h2>Lịch sử các phiên bản CSS đầu tiên</h2>
         <p>Các ý tưởng ban đầu được đưa ra năm 1994 nhưng phiên bản CSS1 chính thức ra đời năm 1996.</p>
         <p>Phiên bản tiếp theo, CSS2, được khởi động ngay sau đó nhưng mãi đến năm 1998 mới hoàn thiện. Phiên bản chính
             thức hoàn thiện nhất của CSS2 là CSS2.1, ra đời năm 2011, bản CSS2.1 nâng cấp được hoàn thiện năm 2016.</p>
-        <h2 class="subtitle">Các phiên bản CSS tiếp theo</h2>
+        <h2>Các phiên bản CSS tiếp theo</h2>
         <p>Từ bản CSS3 trở đi, CSS được phát triển theo từng gói riêng biệt. Hiện nay các gói của CSS3 vẫn đang được
             phát triển và hoàn thiện. Đồng thời một số chuẩn CSS4 và CSS5 vẫn đang được tiếp tục thiết lập mới.</p>
         <p>Hiện tại, hiệp hội chịu trách nhiệm phát triển các chuẩn của HTML, CSS và các công nghệ có liên quan là tổ
-            chức World Wide Web Consortium (W3C), có địa chỉ tại <a href="http://www.w3.org/">www.w3.org</a>.</p>
+            chức World Wide Web Consortium (W3C), có địa chỉ tại <strong>https://www.w3.org</strong></p>
     </div>
 
-    <!-- Căn giữa và đóng khung phần "Quay về trang chủ" -->
     <div class="back-home-container">
         <a href="index.html" class="back-home">Quay về trang chủ</a>
     </div>
