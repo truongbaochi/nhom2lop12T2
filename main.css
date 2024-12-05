@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+header {
+  position: relative;
+  width: 100%;
+  /* Chiếm toàn bộ chiều ngang */
+  height: 30vh;
+  /* Chiều cao header chiếm 60% màn hình */
+  overflow: hidden;
+  /* Cắt nội dung thừa */
+}
+header video {
+  position: absolute;
+  top: 50%;
+  /* Đặt video ở giữa theo chiều dọc */
+  left: 50%;
+  /* Đặt video ở giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+  /* Căn chỉnh chính giữa */
+  min-width: 100%;
+  /* Video phải phủ hết chiều ngang */
+  min-height: 100%;
+  /* Video phải phủ hết chiều cao */
+  object-fit: cover;
+  /* Đảm bảo video không bị méo */
+  z-index: -1;
+  /* Đưa video ra sau nội dung */
+}
+.header-content {
+  position: relative;
+  z-index: 1;
+  /* Đưa nội dung ra trước video */
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 15px 10px;
+}
+.header-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  padding-top: 16px;
+  opacity: 0;
+  /* Ẩn chữ ban đầu */
+  animation: slideUp 2s ease forwards;
+  /* Gọi animation */
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    /* Chữ bắt đầu ở vị trí thấp hơn */
+    opacity: 0;
+    /* Ẩn chữ */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Chữ trượt về đúng vị trí */
+    opacity: 1;
+    /* Hiển thị chữ */
+  }
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+nav a {
+  color: white;
+  padding: 16px 22px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #575757;
+}
+
+.content {
+  padding: 20px;
+  margin-left: 250px;
+  margin-right: 250px;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+hr{
+    border: none;
+    height: 6px;
+    background-image: linear-gradient(90deg,
+                #000000,
+                #494949,
+                #888888,
+                #c4c4c4,
+                #f8f8f8,
+                #c4c4c4,
+                #888888,
+                #494949,
+                #000000,
+                #494949,
+                #888888,
+                #c4c4c4,
+                #f8f8f8,
+                #c4c4c4,
+                #888888,
+                #494949,
+                #494949);
+    background-size: 200% 100%;
+    animation: wave 2s linear infinite;
+    border-radius: 25px;
+    margin: 0;
+    width: 100%;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+        /* Bắt đầu hiệu ứng */
+    }
+    50% {
+        background-position: 50% 25%;
+            /* Bắt đầu hiệu ứng */
+    }
+    100% {
+        background-position: 100% 50%;
+        /* Kết thúc hiệu ứng */
+    }
+}
+
+footer {
+  text-align: center;
+  padding: 0;
+  background-color: skyblue;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
