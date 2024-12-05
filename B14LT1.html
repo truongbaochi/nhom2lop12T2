@@ -10,16 +10,36 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background-color: #ffffff; /* Nền màu trắng */
+            background-color: #f4f4f4; /* Nền màu xám nhạt */
         }
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            text-align: left; /* Căn trái nội dung */
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #3498db;
+        }
+        .highlight {
+            color: red; /* Tô màu đỏ cho chữ "Trả lời" */
+            font-weight: bold; /* In đậm */
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        ul {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+        ul p {
+            margin: 5px 0;
         }
         .back-home {
             display: inline-block;
-            margin-top: 20px;
             padding: 10px 20px;
             border: 2px solid #4CAF50;
             border-radius: 8px;
@@ -30,37 +50,35 @@
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            margin-top: 30px;
         }
         .back-home:hover {
             background-color: #4CAF50;
             color: #ffffff;
         }
         .link-container {
-            text-align: center; /* Căn giữa */
-            margin-top: 30px; /* Khoảng cách trên */
-        }
-	 .highlight {
-            color: red; /* Tô màu đỏ cho chữ "Trả lời" */
-            font-weight: bold; /* In đậm */
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <p><strong>Câu 1. Mỗi phông chữ sau đây thuộc loại nào?</strong></p>
-    <p><img src="b14lt1.png" alt="Ví dụ về phông chữ" width="1000"></p>
-    <p class="highlight">Trả lời:</p>
-    <ul>
-        <p>a) Phông có chân: <strong>Serif</strong></p>
-        <p>b) Phông khoảng cách đều nhau: <strong>Monospace</strong></p>
-        <p>c) Phông không chân: <strong>Sans-serif</strong></p>
-        <p>d) Phông kiểu chữ viết tay: <strong>Cursive</strong></p>
-        <p>e) Phông không chân: <strong>Sans-serif</strong></p>
-        <p>f) Phông trừu tượng: <strong>Fantasy</strong></p>
-        <p>g) Phông khoảng cách đều nhau: <strong>Monospace</strong></p>
-        <p>h) Phông khoảng cách đều nhau: <strong>Monospace</strong></p>
-    </ul>
-    <div class="link-container">
-        <a href="index.html" class="back-home">Quay về trang chủ</a>
+    <div class="container">
+        <h1>Câu 1. Mỗi phông chữ sau đây thuộc loại nào?</h1>
+        <p><img src="b14lt1.png" alt="Ví dụ về phông chữ" width="1000"></p>
+        <p class="highlight">Trả lời:</p>
+        <ul>
+            <p>a) Phông có chân: <strong>Serif</strong></p>
+            <p>b) Phông khoảng cách đều nhau: <strong>Monospace</strong></p>
+            <p>c) Phông không chân: <strong>Sans-serif</strong></p>
+            <p>d) Phông kiểu chữ viết tay: <strong>Cursive</strong></p>
+            <p>e) Phông không chân: <strong>Sans-serif</strong></p>
+            <p>f) Phông trừu tượng: <strong>Fantasy</strong></p>
+            <p>g) Phông khoảng cách đều nhau: <strong>Monospace</strong></p>
+            <p>h) Phông khoảng cách đều nhau: <strong>Monospace</strong></p>
+        </ul>
+        <div class="link-container">
+            <a href="index.html" class="back-home">Quay về trang chủ</a>
+        </div>
     </div>
 </body>
 </html>
