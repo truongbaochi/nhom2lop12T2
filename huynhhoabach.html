@@ -157,6 +157,47 @@
         .back-home:hover {
             background-color: #FF4500;
         }
+.highlight {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
+    color: #28a745; /* Màu xanh lá đậm */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: jumpText 1s infinite; /* Áp dụng hiệu ứng nhảy */
+}
+
+.highlighted-text {
+    font-size: 36px;
+    color: #4CAF50; /* Màu xanh lá sáng */
+    font-style: italic;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
+    animation: jumpText 1s infinite; /* Áp dụng hiệu ứng nhảy */
+}
+
+/* Định nghĩa hiệu ứng nhảy */
+@keyframes jumpText {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px); /* Di chuyển lên */
+    }
+    50% {
+        transform: translateY(0); /* Quay lại vị trí ban đầu */
+    }
+    75% {
+        transform: translateY(10px); /* Di chuyển xuống */
+    }
+    100% {
+        transform: translateY(0); /* Quay lại vị trí ban đầu */
+    }
+}
+
+
+
     </style>
 </head>
 <body>
@@ -212,7 +253,9 @@
             <p>
                 Tuy nhiên, "thần đồng" Toán Tin của chúng ta không thiếu những nét đáng yêu và "khó đỡ". Đó là thói quen trì hoãn deadline, luôn đợi sát ngày mới bắt tay vào làm, khiến bạn bè nhiều phen dở khóc dở cười. Và đặc biệt, với âm nhạc – lĩnh vực từng khiến Bách phải thi lại hai lần, bạn lại biến nó thành câu chuyện hài hước, trở thành "truyền thuyết" mỗi khi lớp nhắc đến.
             </p>
-
+	<div class="highlight">
+    "Anh là ai? <span class="highlighted-text">Bồ em!"</span>
+</div>
 
         <div class="info-left">
             <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/share/19hPsEZfex/" target="_blank">https://www.facebook.com/share/19hPsEZfex/</a></p>
@@ -223,6 +266,7 @@
             <a href="index.html" class="back-home">Quay về trang chủ</a>
         </div>
     </div>
+
 
 </body>
 </html>
