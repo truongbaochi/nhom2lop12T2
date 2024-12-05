@@ -195,8 +195,18 @@
         transform: translateY(0); /* Quay lại vị trí ban đầu */
     }
 }
+.youtube-video {
+    text-align: center; /* Căn giữa video */
+    margin: 0 auto; /* Đảm bảo video căn giữa khi không có kích thước cố định */
+    max-width: 100%; /* Đảm bảo video không vượt qua kích thước màn hình */
+}
 
-
+.youtube-video iframe {
+    width: 100%; /* Video sẽ tự động chiếm toàn bộ chiều rộng của phần chứa */
+    max-width: 560px; /* Giới hạn chiều rộng tối đa của video */
+    height: 315px; /* Giới hạn chiều cao của video */
+    border-radius: 10px; /* Làm mềm các góc của video */
+}
 
     </style>
 </head>
@@ -260,7 +270,12 @@
         <div class="info-left">
             <p><strong>Link Facebook cá nhân:</strong> <a href="https://www.facebook.com/share/19hPsEZfex/" target="_blank">https://www.facebook.com/share/19hPsEZfex/</a></p>
         </div>
-
+<div class="content">
+    <!-- Nhúng video YouTube -->
+    <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LcniJZRXf2c?si=aI-I_7X2XQymdfoJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
         <!-- Quay về trang chủ -->
         <div class="back-home-container">
             <a href="index.html" class="back-home">Quay về trang chủ</a>
