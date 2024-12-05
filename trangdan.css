@@ -1,0 +1,78 @@
+.nut{
+    text-decoration: none;
+    font-size: 4rem;
+        /* Kích thước chữ lớn */
+        color: #ffffff;
+        /* Màu chữ ban đầu */
+        text-shadow:
+            0 0 10px #00f,
+            /* Hiệu ứng phát sáng xanh lam */
+            0 0 20px #00f,
+            0 0 30px #00f,
+            0 0 40px #0ff,
+            /* Ánh sáng xa hơn */
+            0 0 50px #0ff,
+            0 0 60px #0ff;
+        animation: glow 2s infinite;
+        /* Animation lặp lại */
+}
+@keyframes glow {
+    0% {
+        text-shadow:
+            0 0 10px #00f,
+            0 0 20px #00f,
+            0 0 30px #00f,
+            0 0 40px #0ff,
+            0 0 50px #0ff,
+            0 0 60px #0ff;
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px #0ff,
+            0 0 30px #0ff,
+            0 0 40px #0ff,
+            0 0 50px #0ff,
+            0 0 60px #fff,
+            0 0 70px #fff;
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px #00f,
+            0 0 20px #00f,
+            0 0 30px #00f,
+            0 0 40px #0ff,
+            0 0 50px #0ff,
+            0 0 60px #0ff;
+    }
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+.video-background {
+    position: fixed;
+    /* Cố định video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Chiếm toàn bộ chiều ngang */
+    height: 100%;
+    /* Chiếm toàn bộ chiều cao */
+    object-fit: cover;
+    /* Căn chỉnh video để phủ hết màn hình */
+    z-index: -1;
+    /* Đặt phía sau nội dung */
+}
+.content {
+    position: relative;
+    /* Đặt nội dung phía trước video */
+    z-index: 1;
+    text-align: center;
+}
