@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 14 - Vận dụng - Câu 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #3498db;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        code {
+            color: #66d9ef;
+        }
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-home {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #27ae60;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #27ae60;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .back-home:hover {
+            background-color: #27ae60;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bài 14 - Vận dụng - Câu 2</h1>
+        <h2>Yêu cầu:</h2>
+        <p>
+            Với bài đọc thêm <strong>Lịch sử CSS (Bài 13)</strong>, em hãy thiết lập hai tệp CSS khác nhau để định dạng cho trang web mô tả bài đọc thêm này. 
+            Hai kiểu định dạng được thiết lập cần khác nhau về phông chữ, cỡ chữ và màu chữ.
+        </p>
+	<h2>Trả lời</h2>
+        <h2>Kiểu 1:</h2>
+        <pre>
+&lt;style&gt;
+body {background-color: powderblue; font-family: Arial, sans-serif; font-size: 16px;}
+div {width: 80%; margin: auto; padding: 20px; border: 2px solid blue;}
+h2 {font-family: "Times New Roman", serif; font-size: 28px; color: #990000;}
+p {font-family: "Courier New", monospace; font-size: 18px; text-align: justify; text-indent: 20px;}
+&lt;/style&gt;
+        </pre>
+        <h2>Kiểu 2:</h2>
+        <pre>
+&lt;style&gt;
+body {font-family: Verdana, sans-serif; font-size: 18px; color: #555555;}
+div {width: 80%; margin: auto; padding: 20px; border: 2px solid red;}
+h2 {font-family: "Helvetica Neue", Arial, sans-serif; font-size: 32px; color: #006600;}
+p {font-family: "Georgia", serif; font-size: 18px; text-align: justify; text-indent: 20px; color: #888888;}
+&lt;/style&gt;
+        </pre>
+        <div class="link-container">
+            <a href="index.html" class="back-home">Quay về trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
