@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng dẫn sử dụng màu trong ảnh</title>
+    <title>Bài 8 - Vận dụng - Câu 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,14 +52,17 @@
         .back-home {
             display: block;
             text-align: center;
-            margin-top: 30px;
-            font-size: 18px;
+            margin-top: 20px;
+            font-size: 16px;
             font-weight: bold;
             color: white;
             background-color: #28a745;
-            padding: 10px;
+            padding: 8px 30px; /* Tăng chiều rộng */
             text-decoration: none;
             border-radius: 5px;
+            width: auto; /* Để chiều rộng tự động căn chỉnh theo nội dung */
+            max-width: 200px; /* Giới hạn độ rộng tối đa */
+            margin: 20px auto; /* Căn giữa */
         }
 
         .back-home:hover {
@@ -81,7 +84,7 @@
         </ul>
     </div>
 
-    <a href="index.html" class="index">QUAY VỀ TRANG CHỦ</a>
+    <a href="index.html" class="back-home">QUAY VỀ TRANG CHỦ</a>
 </div>
 
 </body>
