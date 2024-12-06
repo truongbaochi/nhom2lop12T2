@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình Python tạo bảng HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: left;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 800px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.95rem;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        a.back-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Bảng giữ nguyên màu sắc và phông chữ */
+        th, td {
+            border: 1px solid #4caf50;
+            padding: 8px;
+            text-align: center;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Chương trình Python tạo bảng HTML</h2>
+        <p><strong>Cho trước một bảng dữ liệu cỡ nx4</strong>, mỗi hàng tương ứng với một bộ (họ tên, điểm Toán, điểm Vật lý, điểm Hóa học). Viết chương trình Python để tạo ra tệp HTML thực hiện việc vẽ bảng tương tự như Hình 9.5 và bổ sung dữ liệu vào các hàng phía dưới.</p>
+        <p><strong>Trả lời:</strong></p>
+        <p><strong>Đoạn code Python:</strong></p>
+        <pre>
+data_input = [['Nguyễn Văn A', 10, 9, 8], ['Trần Văn B', 9, 9.5, 8.5], ['Phạm Thị C', 9.5, 9.5, 9]]
+output_file = open("D:\\TIN12-KNTT\\B9-Vandung.html", "w", encoding="utf-8")
+content = "&lt;table border=&quot;1&quot;&gt;\n"
+content += """&lt;tr&gt;
+&lt;th style=&quot;border:1px solid green&quot; rowspan=&quot;2&quot;&gt;Họ và tên&lt;/th&gt;
+&lt;th style=&quot;border: 1px solid green&quot; colspan=&quot;3&quot;&gt;Điểm thi&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid red&quot;&gt;Toán&lt;/td&gt;
+&lt;td style=&quot;border:1px solid red&quot;&gt;Vật lý&lt;/td&gt;
+&lt;td style=&quot;border:1px solid red&quot;&gt;Hóa học&lt;/td&gt;
+&lt;/tr&gt;
+"""
+for dulieu in data_input:
+    content += "&lt;tr&gt;"
+    for d in dulieu:
+        content += """&lt;td style=&quot;border:1px solid red&quot;&gt;""" + str(d) + """&lt;/td&gt;"""
+    content += "&lt;/tr&gt;\n"
+content += "&lt;/table&gt;"
+output_file.write(content)
+output_file.close()
+        </pre>
+        <p><strong>Sau khi RUN, kết quả hiển thị bên NOTEPAD:</strong></p>
+        <img src="B9VD.png" alt="Ảnh minh họa">
+        <p><strong>Kết quả:</strong></p>
+        <table border="1">
+            <tr>
+                <th style="border: 1px solid green" rowspan="2">Họ và tên</th>
+                <th style="border: 1px solid green" colspan="3">Điểm thi</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid red">Toán</td>
+                <td style="border: 1px solid red">Vật lý</td>
+                <td style="border: 1px solid red">Hóa học</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid red">Nguyễn Văn A</td>
+                <td style="border: 1px solid red">10</td>
+                <td style="border: 1px solid red">9</td>
+                <td style="border: 1px solid red">8</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid red">Trần Văn B</td>
+                <td style="border: 1px solid red">9</td>
+                <td style="border: 1px solid red">9.5</td>
+                <td style="border: 1px solid red">8.5</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid red">Phạm Thị C</td>
+                <td style="border: 1px solid red">9.5</td>
+                <td style="border: 1px solid red">9.5</td>
+                <td style="border: 1px solid red">9</td>
+            </tr>
+        </table>
+        <a href="index.html" class="back-link">Quay về trang chủ</a>
+    </div>
+</body>
+</html>
