@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu hỏi và trả lời</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f9f9f9, #d7e1ec);
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .container p {
+            text-align: left;
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+        .container code {
+            background: #f7f7f7;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #d6336c;
+        }
+        .container img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        a.back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: #fff;
+            background: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        a.back-link:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><strong>Câu 1.</strong> Tìm ví dụ và giải thích ý nghĩa cho các mẫu định dạng CSS tổng quát như sau:</p>
+        
+        <p><strong>a) Mẫu định dạng <code>E1 E2 E3</code>:</strong></p>
+        <p>Đây là một mẫu kết hợp (<em>descendant selector</em>) trong CSS, áp dụng cho các phần tử <code>E3</code> nằm trong phần tử <code>E2</code>, và phần tử <code>E2</code> nằm trong phần tử <code>E1</code>. Mẫu này không yêu cầu <code>E2</code> và <code>E3</code> là con trực tiếp của <code>E1</code>, mà có thể nằm bất kỳ đâu trong cây phân cấp của <code>E1</code>.</p>
+        
+        <img src="B15VD1a.png" alt="Ví dụ minh họa mẫu E1 E2 E3">
+        
+        <p>Trong ví dụ trên, mẫu định dạng <code>.container .parent .child span</code> áp dụng cho phần tử <code>&lt;span&gt;</code> nằm trong phần tử có lớp <code>child</code>, nằm trong phần tử có lớp <code>parent</code>, và nằm trong phần tử có lớp <code>container</code>. Điều này cho phép chúng ta định dạng các phần tử <code>&lt;span&gt;</code> trong một cây phân cấp phức tạp.</p>
+
+        <p><strong>b) Mẫu định dạng <code>E1 > E2 > E3</code>:</strong></p>
+        <p>Đây là một mẫu kết hợp (<em>child combinator</em>) trong CSS, áp dụng cho các phần tử <code>E3</code> là con trực tiếp của <code>E2</code>, và <code>E2</code> là con trực tiếp của <code>E1</code>. Mẫu này yêu cầu <code>E2</code> và <code>E3</code> nằm trực tiếp trong <code>E1</code>.</p>
+        
+        <img src="B15VD1b.png" alt="Ví dụ minh họa mẫu E1 > E2 > E3">
+        
+        <p>Trong ví dụ trên, mẫu định dạng <code>.parent > .child > span</code> áp dụng cho phần tử <code>&lt;span&gt;</code> là con trực tiếp của phần tử có lớp <code>child</code>, và phần tử có lớp <code>child</code> là con trực tiếp của phần tử có lớp <code>parent</code>. Điều này cho phép chúng ta định dạng các phần tử <code>&lt;span&gt;</code> chỉ khi chúng nằm trực tiếp trong các phần tử cụ thể trong cây phân cấp.</p>
+        
+        <a href="index.html" class="back-link">Quay về trang chủ</a>
+    </div>
+</body>
+</html>
