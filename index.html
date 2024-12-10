@@ -4,112 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhóm 2 - Lớp 12 Toán 2</title>
-    <!-- Thêm font từ Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Sử dụng ảnh làm nền */
-        body {
-            background: url('https://thuthuatnhanh.com/wp-content/uploads/2022/06/Hinh-nen-iPad-4K.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
-        
-        /* Tiêu đề chính không có màu nền */
-        h1 {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 3rem;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            padding: 20px 0;
-        }
-
-        /* Cải thiện giao diện bảng */
-        table {
-            width: 70%;
-            border-collapse: collapse;
-            margin: 40px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.9); /* Thêm nền sáng cho bảng */
-        }
-
-        th, td {
-            padding: 20px; /* Tăng padding cho ô trong bảng */
-            text-align: left;
-            border-bottom: 2px solid #ddd; /* Thêm đường kẻ ngang giữa các hàng */
-            border-right: 2px solid #ddd; /* Thêm đường kẻ dọc giữa các cột */
-            font-size: 1.2rem; /* Tăng kích thước chữ trong bảng */
-        }
-
-        /* Đặt màu nền và chữ cho tiêu đề */
-        th {
-            background-color: #4CAF50; /* Màu nền sáng cho tiêu đề */
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Màu nền cho các ô dữ liệu */
-        td {
-            background-color: #f2f2f2; /* Nền sáng cho các ô dữ liệu */
-            color: #333;
-        }
-
-        /* Hiệu ứng hover */
-        tr:hover {
-            background-color: #e1f5fe;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-            font-size: 1.1rem; /* Tăng kích thước chữ cho các liên kết */
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-
-        /* Thêm hiệu ứng hover cho các hàng trong bảng */
-        tr:hover td {
-            color: #0072ff;
-            background-color: #fff;
-        }
-
-        /* Lời kết thúc ở cuối trang với chữ lớn, màu vàng đậm và đậm */
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 2rem; /* Tăng kích thước chữ */
-            padding: 20px;
-            color: white; /* Màu chữ trắng */
-            font-weight: bold; /* Tô đậm chữ */
-            border-top: 3px solid #4CAF50; /* Đường kẻ ngang trên phần footer */
-        }
-    </style>
-</head>
-<body>
-    <h1>Nhóm 2 - Lớp 12 Toán 2</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Bài</th>
-                <th>Liên Kết</th>
-            </tr>
-        </thead>
-        <tbody>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nhóm 2 - Lớp 12 Toán 2</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -147,6 +41,12 @@
             width: 200px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .member-card img {
+            width: 100%;
+            border-radius: 10px;
         }
 
         .member-card a {
@@ -157,6 +57,20 @@
 
         .member-card a:hover {
             text-decoration: underline;
+        }
+
+        /* Hiệu ứng hover */
+        .member-card:hover {
+            transform: scale(1.1); /* Tăng kích thước */
+            border-color: yellow; /* Đổi màu viền */
+            animation: border-flash 0.6s infinite; /* Hiệu ứng nhấp nháy */
+        }
+
+        /* Keyframes cho nhấp nháy viền */
+        @keyframes border-flash {
+            0% { border-color: yellow; }
+            50% { border-color: red; }
+            100% { border-color: yellow; }
         }
 
         table {
@@ -172,8 +86,8 @@
             padding: 20px;
             text-align: left;
             border-bottom: 2px solid #ddd;
-            border-right: 2px solid #ddd;
             font-size: 1.2rem;
+            color: #333;
         }
 
         th {
@@ -189,125 +103,201 @@
         .footer {
             text-align: center;
             margin-top: 50px;
-            font-size: 2rem;
+            font-size: 1.5rem;
             padding: 20px;
             color: white;
             font-weight: bold;
             border-top: 3px solid #4CAF50;
         }
+.web-access {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    width: fit-content;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng phóng to và bóng mượt */
+}
+
+.web-access:hover {
+    transform: scale(1.1); /* Phóng to 10% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ */
+}
+
+.web-access a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu */
+}
+
+.web-access a:hover {
+    color: #2c7a39; /* Đổi màu chữ khi di chuột */
+}
+/* Tạo hiệu ứng cho các liên kết trong bảng */
+table a {
+    text-decoration: none;
+    color: #007bff; /* Màu mặc định */
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease; /* Hiệu ứng mượt */
+}
+
+table a:hover {
+    transform: scale(1.1); /* Phóng to 10% */
+    color: #0056b3; /* Đổi màu khi di chuột */
+    text-decoration: underline; /* Gạch chân khi di chuột */
+}
+/* Mũi tên và dòng chữ */
+.arrow-text {
+    position: fixed; /* Cố định vị trí */
+    top: 50%; /* Canh giữa theo chiều dọc */
+    left: 10px; /* Canh lề trái */
+    transform: translateY(-50%); /* Dịch chuyển chính giữa theo trục Y */
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7); /* Nền màu đen mờ */
+    padding: 10px 20px;
+    border-radius: 20px; /* Bo tròn góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bóng mờ */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa mũi tên và chữ */
+}
+
+/* Mũi tên */
+.arrow-text::before {
+    content: "➔"; /* Biểu tượng mũi tên */
+    font-size: 1.5rem;
+    color: #4CAF50; /* Màu mũi tên */
+    animation: bounce 1.5s infinite; /* Hiệu ứng nhấp nháy */
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px); /* Dịch mũi tên qua phải */
+    }
+}
+
     </style>
+
+
 </head>
 <body>
-
+    <h1>Nhóm 2 - Lớp 12 Toán 2</h1>
     <!-- Giới thiệu thành viên -->
     <div class="members">
         <div class="member-card">
-    <img src="https://img.freepik.com/fotos-premium/um-passaro-de-fogo-com-a-palavra-fogo-nele_901003-38813.jpg" alt="Huỳnh Hoa Bách" style="width: 100%; border-radius: 10px;">
+            <img src="https://img.freepik.com/fotos-premium/um-passaro-de-fogo-com-a-palavra-fogo-nele_901003-38813.jpg" alt="Huỳnh Hoa Bách">
             <p><span style="color: red; font-weight: bold;">Huỳnh Hoa Bách</span></p>
             <a href="huynhhoabach.html">Chi tiết</a>
         </div>
-<div class="member-card">
-    <img src="https://t3.ftcdn.net/jpg/06/19/78/98/360_F_619789872_hcr1ZqgdZUnSd84jdMV6IgFi7muJoaVt.jpg" alt="Trương Bảo Chí" style="width: 100%; border-radius: 10px;">
-    <p><span style="color: red; font-weight: bold;">Trương Bảo Chí</span></p>
-    <a href="tbc.html">Chi tiết</a>
-</div>
         <div class="member-card">
-    <img src="https://nupet.vn/wp-content/uploads/2023/10/hinh-nen-ngo-nghinh-anh-meo-cute-nupet-8.jpg" alt="Lê Trần Phương Vy" style="width: 100%; border-radius: 10px;">
+            <img src="https://t3.ftcdn.net/jpg/06/19/78/98/360_F_619789872_hcr1ZqgdZUnSd84jdMV6IgFi7muJoaVt.jpg" alt="Trương Bảo Chí">
+            <p><span style="color: red; font-weight: bold;">Trương Bảo Chí</span></p>
+            <a href="tbc.html">Chi tiết</a>
+        </div>
+        <div class="member-card">
+            <img src="https://nupet.vn/wp-content/uploads/2023/10/hinh-nen-ngo-nghinh-anh-meo-cute-nupet-8.jpg" alt="Lê Trần Phương Vy">
             <p><span style="color: red; font-weight: bold;">Lê Trần Phương Vy</span></p>
             <a href="levy.html">Chi tiết</a>
         </div>
         <div class="member-card">
-    <img src="https://media.istockphoto.com/id/1225592612/vector/neon-glowing-question-mark-quiz-neon-banner-color-neon-frame-on-brick-wall-realistic-bright.jpg?s=612x612&w=0&k=20&c=Ja5w11v3E6yquBgr5Qxo5knclhaHzqXsrm-MW1YGYRc=" alt="Trần Châu Nguyên" style="width: 100%; border-radius: 10px;">
+            <img src="https://media.istockphoto.com/id/1225592612/vector/neon-glowing-question-mark-quiz-neon-banner-color-neon-frame-on-brick-wall-realistic-bright.jpg?s=612x612&w=0&k=20&c=Ja5w11v3E6yquBgr5Qxo5knclhaHzqXsrm-MW1YGYRc=" alt="Trần Châu Nguyên">
             <p><span style="color: red; font-weight: bold;">Trần Châu Nguyên</span></p>
             <a href="tcn.html">Chi tiết</a>
         </div>
     </div>
+	<div class="arrow-text">
+    <span>Kéo xuống để xem web nhóm thiết kế</span>
+</div>
 
-                <tr>
-                <td>Canva tổng hợp các nội dung bài học</td>
-                <td>
-                    <a href="https://www.canva.com/design/DAGSzZ2z0lE/0A9TjjAMCvehc2kkvVtL6A/edit" target="_blank">Link Canva</a>
-                </td>
-            </tr>
+    <!-- Bảng nội dung -->
+    <table>
+        <thead>
             <tr>
                 <td>Bài 7. HTML và cấu trúc trang web</td>
                 <td>
-                    <a href="B7LT1.html">Bài 7 - Luyện tập - Câu 1</a>
-                    <a href="B7LT2.html">Bài 7 - Luyện tập - Câu 2</a>
-                    <a href="B7VD1.html">Bài 7 - Vận dụng - Câu 1</a>
+                    <a href="B7LT1.html">Bài 7 - Luyện tập - Câu 1</a><br>
+                    <a href="B7LT2.html">Bài 7 - Luyện tập - Câu 2</a><br>
+                    <a href="B7VD1.html">Bài 7 - Vận dụng - Câu 1</a><br>
                     <a href="B7VD2.html">Bài 7 - Vận dụng - Câu 2</a>
                 </td>
             </tr>
             <tr>
                 <td>Bài 8. Định dạng văn bản</td>
                 <td>
-                    <a href="B8LT1.html">Bài 8 - Luyện tập - Câu 1</a>
-                    <a href="B8LT2.html">Bài 8 - Luyện tập - Câu 2</a>
-                    <a href="B8VD1.html">Bài 8 - Vận dụng - Câu 1</a>
+                    <a href="B8LT1.html">Bài 8 - Luyện tập - Câu 1</a><br>
+                    <a href="B8LT2.html">Bài 8 - Luyện tập - Câu 2</a><br>
+                    <a href="B8VD1.html">Bài 8 - Vận dụng - Câu 1</a><br>
                     <a href="B8VD2.html">Bài 8 - Vận dụng - Câu 2</a>	
                 </td>
             </tr>
             <tr>
                 <td>Bài 9. Tạo danh sách, bảng</td>
                 <td>
-                    <a href="B9LT.html">Bài 9 - Luyện tập</a>
+                    <a href="B9LT.html">Bài 9 - Luyện tập</a><br>
                     <a href="B9VD.html">Bài 9 - Vận dụng</a>
                 </td>
             </tr>
             <tr>
                 <td>Bài 10. Tạo liên kết</td>
                 <td>
-                    <a href="B10LT1_thongtin.html">Bài 10 - Luyện tập - Câu 1</a>
-                    <a href="B10LT2.html">Bài 10 - Luyện tập - Câu 2</a>
+                    <a href="B10LT1_thongtin.html">Bài 10 - Luyện tập - Câu 1</a><br>
+                    <a href="B10LT2.html">Bài 10 - Luyện tập - Câu 2</a><br>
                     <a href="B10VD.html">Bài 10 - Vận dụng</a>
                 </td>
             </tr>
             <tr>
                 <td>Bài 11. Chèn tệp tin đa phương tiện và khung nội tuyến vào trang web</td>
                 <td>
-                    <a href="B11LT1.html">Bài 11 - Luyện tập - Câu 1</a>
-                    <a href="B11LT2.html">Bài 11 - Luyện tập - Câu 2</a>
+                    <a href="B11LT1.html">Bài 11 - Luyện tập - Câu 1</a><br>
+                    <a href="B11LT2.html">Bài 11 - Luyện tập - Câu 2</a><br>
                     <a href="B11VD.html">Bài 11 - Vận dụng</a>
                 </td>
             </tr>
             <tr>
                 <td>Bài 12. Tạo biểu mẫu</td>
                 <td>
-                    <a href="B12LT.html">Bài 12 - Luyện tập</a>
-                    <a href="B12VD1.html">Bài 12 - Vận dụng - Câu 1</a>
+                    <a href="B12LT.html">Bài 12 - Luyện tập</a><br>
+                    <a href="B12VD1.html">Bài 12 - Vận dụng - Câu 1</a><br>
                     <a href="B12VD2.html">Bài 12 - Vận dụng - Câu 2</a>	
                 </td>
             </tr>
             <tr>
                 <td>Bài 13. Khái niệm, vai trò của CSS</td>
                 <td>
-                     <a href="B13LT1.html">Bài 13 - Luyện tập - Câu 1</a>
-                      <a href="B13LT2.html">Bài 13 - Luyện tập - Câu 2</a>
-                    <a href="B13VD1.html"> Bài 13 - Vận dụng - Câu 1</a>
+                     <a href="B13LT1.html">Bài 13 - Luyện tập - Câu 1</a><br>
+                      <a href="B13LT2.html">Bài 13 - Luyện tập - Câu 2</a><br>
+                    <a href="B13VD1.html"> Bài 13 - Vận dụng - Câu 1</a><br>
                     <a href="B13VD2.html">Bài 13 - Vận dụng - Câu 2</a>
                 </td>
             </tr>
                         <td>Bài 14. Định dạng văn bản bằng CSS
                     </td>
                 <td>
-                     <a href="B14LT1.html">Bài 14 - Luyện tập - Câu 1</a>
-                      <a href="B14LT2.html">Bài 14 - Luyện tập - Câu 2</a>
-                    <a href="B14VD1.html"> Bài 14 - Vận dụng - Câu 1</a>
+                     <a href="B14LT1.html">Bài 14 - Luyện tập - Câu 1</a><br>
+                      <a href="B14LT2.html">Bài 14 - Luyện tập - Câu 2</a><br>
+                    <a href="B14VD1.html"> Bài 14 - Vận dụng - Câu 1</a><br>
                     <a href="B14VD2.html">Bài 14 - Vận dụng - Câu 2</a>
                 </td>
             </tr>
-            </tr>
-           
         </tbody>
     </table>
-<div style="text-align: center; margin: 20px auto; padding: 20px; background-color: rgba(255, 255, 255, 0.8); border: 2px solid #4CAF50; border-radius: 10px; width: fit-content;">
+<div class="web-access">
     <a href="trangdan.html" style="text-decoration: none; font-size: 1.5rem; color: #4CAF50; font-weight: bold;">
         TRUY CẬP VÀO WEB CỦA NHÓM 2 THIẾT KẾ
     </a>
 </div>
-
     <div class="footer">
-        <p>Trang web được thiết bởi NHÓM 2 - STRONG TEAM LỚP 12 TOÁN 2</p>
+        <p>Trang web được thiết kế bởi Nhóm 2 - Lớp 12 Toán 2</p>
     </div>
 </body>
 </html>
