@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 Màu Chuẩn CSS2.1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-home a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-home a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>17 Màu Chuẩn CSS2.1</h1>
+        <p><strong>Câu 1.</strong> Thiết lập hệ màu cơ bản (17 màu của CSS2.1) theo bộ ba tham số R, G, B.</p>
+        <p><strong>Trả lời:</strong></p>
+        <p>17 màu chuẩn:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên màu</th>
+                    <th>RGB-hex</th>
+                    <th>RGB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>black</td><td>#000000</td><td>(0,0,0)</td></tr>
+                <tr><td>2</td><td>silver</td><td>#C0C0C0</td><td>(192,192,192)</td></tr>
+                <tr><td>3</td><td>white</td><td>#FFFFFF</td><td>(255,255,255)</td></tr>
+                <tr><td>4</td><td>maroon</td><td>#800000</td><td>(128,0,0)</td></tr>
+                <tr><td>5</td><td>red</td><td>#FF0000</td><td>(255,0,0)</td></tr>
+                <tr><td>6</td><td>purple</td><td>#800080</td><td>(128,0,128)</td></tr>
+                <tr><td>7</td><td>fuchsia</td><td>#FF00FF</td><td>(255,0,255)</td></tr>
+                <tr><td>8</td><td>green</td><td>#008000</td><td>(0,128,0)</td></tr>
+                <tr><td>9</td><td>lime</td><td>#00FF00</td><td>(0,255,0)</td></tr>
+                <tr><td>10</td><td>olive</td><td>#808000</td><td>(128,128,0)</td></tr>
+                <tr><td>11</td><td>yellow</td><td>#FFFF00</td><td>(255,255,0)</td></tr>
+                <tr><td>12</td><td>navy</td><td>#000080</td><td>(0,0,128)</td></tr>
+                <tr><td>13</td><td>blue</td><td>#0000FF</td><td>(0,0,255)</td></tr>
+                <tr><td>14</td><td>teal</td><td>#008080</td><td>(0,128,128)</td></tr>
+                <tr><td>15</td><td>aqua</td><td>#00FFFF</td><td>(0,255,255)</td></tr>
+                <tr><td>16</td><td>orange</td><td>#FFA500</td><td>(255,165,0)</td></tr>
+                <tr><td>17</td><td>gray</td><td>#808080</td><td>(128,128,128)</td></tr>
+            </tbody>
+        </table>
+        <p><strong>Đoạn code:</strong></p>
+            <img src="B15LT1.png" alt="Mô tả hình ảnh">
+        <p><strong>Kết quả:</strong></p>
+<html>
+<head>
+<title>Màu cơ bản của CSS2.1</title>
+<style>
+.color-sample {
+width: 100px;
+height: 100px;
+display: inline-block;
+margin: 10px;
+border: 1px solid #000;
+}
+</style>
+</head>
+<body>
+<h1>Màu cơ bản của CSS2.1</h1>
+<div class="color-sample" style="background-color: rgb(0, 0, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(192, 192, 192);"></div> 
+<div class="color-sample" style="background-color: rgb(255, 255, 255);"></div>
+<div class="color-sample" style="background-color: rgb(128, 0, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(0, 0, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(255, 0, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(128, 0, 128);"></div> 
+<div class="color-sample" style="background-color: rgb(255, 0, 255);"></div> 
+<div class="color-sample" style="background-color: rgb(0, 128, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(0, 255, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(255, 255, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(0, 0, 128);"></div> 
+<div class="color-sample" style="background-color: rgb(0, 0, 255);"></div> 
+<div class="color-sample" style="background-color: rgb(0, 128, 128);"></div> 
+<div class="color-sample" style="background-color: rgb(0, 255, 255);"></div> 
+<div class="color-sample" style="background-color: rgb(255, 165, 0);"></div> 
+<div class="color-sample" style="background-color: rgb(128, 128, 128);"></div> 
+</body>
+</html>
+
+        <div class="back-home">
+            <a href="index.html">Quay về trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
