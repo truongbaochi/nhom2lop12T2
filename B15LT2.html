@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu hỏi và câu trả lời</title>
+    <style>
+        /* Tổng thể trang */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ece9e6, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Khung nội dung chính */
+        .container {
+            max-width: 900px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        /* Câu hỏi và tiêu đề */
+        h2 {
+            color: #333;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Làm nổi bật ký hiệu và code */
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background: #f5f5f5;
+            color: #d63384; /* Màu nổi bật */
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 18px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Nội dung trả lời */
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Khung hình ảnh */
+        .image-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Nút quay về trang chủ */
+        .home-link-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .home-link {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(to right, #ff5722, #e64a19);
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .home-link:hover {
+            background: linear-gradient(to right, #ff8a50, #d84315);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Hiệu ứng xuất hiện */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Câu 2. Khi nào các mẫu định dạng <code>E F</code> và <code>E > F</code> có tác dụng như nhau?</h2>
+        <p><strong>Trả lời:</strong></p>
+        <div class="image-container">
+            <img src="B15LT2.png" alt="Mô tả hình ảnh liên quan">
+        </div>
+        <p>Khi <code>F</code> là phần tử con trực tiếp của <code>E</code>.</p>
+        <p>Trong trường hợp này, cả hai mẫu đều áp dụng cho phần tử <code>F</code> nằm trong phần tử <code>E</code>. Điều này có nghĩa là phần tử <code>F</code> phải là con trực tiếp của phần tử <code>E</code> và không được chứa trong bất kỳ phần tử con nào khác.</p>
+        <div class="home-link-wrapper">
+            <a href="index.html" class="home-link">Quay về trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
