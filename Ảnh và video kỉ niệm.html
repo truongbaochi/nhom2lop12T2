@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ảnh video 12 Toán Tin</title>
+    <title>Ảnh và Video Kỷ Niệm</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Quicksand:wght@500&display=swap"
         rel="stylesheet">
     <style>
+        /* Reset và cấu trúc cơ bản */
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.8;
@@ -19,11 +20,60 @@
             overflow-x: hidden;
         }
 
+        header {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Giữ lại chiều cao như cũ */
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FF5722;
+        }
+
         .container {
             max-width: 1100px;
             margin: 30px auto;
             background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
+            border-radius: 15px;
             padding: 40px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
@@ -43,68 +93,55 @@
             text-align: justify;
         }
 
-        .food-item {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .food-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
 
-        .food-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .food-item h2 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 28px;
-            color: #FF5722;
-            margin-top: 0;
-            text-align: left;
-        }
-
-        .food-item img {
+        .food-gallery img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             border-radius: 12px;
-            margin-top: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
-        .youtube-embed {
-            margin-top: 20px;
-            text-align: center;
+        .food-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .youtube-embed iframe {
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
+        /* Phóng to ảnh */
+        .modal {
+            display: none;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
         }
 
-        nav a {
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
             color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-family: 'Quicksand', sans-serif;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #FF5722;
+            cursor: pointer;
         }
 
         .back-home {
@@ -130,23 +167,9 @@
             text-decoration: underline;
         }
 
-        .food-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .food-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .food-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        /* Hiệu ứng hover cho nút quay lại trang chủ */
+        .back-home:hover {
+            background-color: #c8e6c9;
         }
 
         @media (max-width: 768px) {
@@ -167,20 +190,11 @@
 </head>
 
 <body>
+
     <header>
-        <div class="header-content"
-            style="position: relative; width: 100%; height: 300px; border: 2px solid #FF5722; border-radius: 10px; overflow: hidden;">
-            <!-- Video -->
-            <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
-                <source src="anhdongdautrang.mp4" type="video/mp4" />
-                <source src="anhdongdautrang.mp4" type="video/webm" />
-            </video>
-            <!-- Text Content -->
-            <div class="text-overlay"
-                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; font-family: Arial, sans-serif; padding: 20px; border: 3px solid #FF5722; background-color: rgba(255, 87, 34, 0.7); border-radius: 10px;">
-                <h1 style="font-size: 48px; font-weight: bold; margin: 0;">Bức tranh thanh xuân 12TT</h1>
-                <p style="font-size: 20px; margin: 10px 0 0; font-weight: bold;">Made by Group 2 HTML</p>
-            </div>
+        <div>
+            <h1>Bức tranh thanh xuân 12TT</h1>
+            <p>Made by Group 2 HTML</p>
         </div>
     </header>
 
@@ -188,36 +202,58 @@
         <a href="index2.html">Trang chủ</a>
         <a href="Tài liệu học tập.html">Tài liệu học tập</a>
         <a href="Ảnh và video kỉ niệm.html">Ảnh & video lớp</a>
-        <a href="thethao.html" >Thể thao</a>
-        <a href="amthuc.html" >Ẩm thực</a>
-        <a href="index.html">Credits</a>
+        <a href="thethao.html" target="_blank">Thể thao</a>
+        <a href="amthuc.html" target="_blank">Ẩm thực</a>
+        <a href="giaitri.html" target="_blank">Giải trí</a>
+        <a href="gioithieu.html" target="_blank">Credits</a>
     </nav>
 
     <div class="container">
-        <h1>Ảnh & video kỉ niệm</h1>
-        <p>Đây là nơi lưu giữ những kỉ niệm của lớp 12TT </p>
+        <h1>Ảnh & video kỷ niệm</h1>
+        <p>Đây là nơi lưu giữ những kỷ niệm của lớp 12TT. Hãy nhấn vô từng tấm ảnh để xem chi tiết hơn!</p>
 
-        <!-- gallery -->
-        <div class="gallery">
-            <!-- Add your food images below -->
-            <img src="1 1.jpg" alt="Hinh 1">
-            <img src="2.jpg" alt="Hinh 2">
-            <img src="3.jpg" alt="Hinh 3">
-            <img src="4.jpg" alt="Hinh 4">
-            <img src=5.jpg" alt="Hinh 5">
-            <img src="6.jpg" alt="Hinh 6">
-            <img src="7.jpg" alt="Hinh 7">
-            <img src="8.jpg" alt="Hinh 8">
-            <img src="9.jpg" alt="Hinh 9">
-            <img src="0.jpg" alt="Hinh 10">
-            <img src="11.jpg" alt="Hinh 11">
-            <img src="12.jpg" alt="Hinh 12">
-            <img src="13.jpg" alt="Hinh 13">
+        <!-- Gallery -->
+        <div class="food-gallery">
+            <img src="1 1.jpg" alt="Hình 1" onclick="openModal(this.src)">
+            <img src="2.jpg" alt="Hình 2" onclick="openModal(this.src)">
+            <img src="3.jpg" alt="Hình 3" onclick="openModal(this.src)">
+            <img src="5.jpg" alt="Hình 5" onclick="openModal(this.src)">
+            <img src="6.jpg" alt="Hình 6" onclick="openModal(this.src)">
+            <img src="7.jpg" alt="Hình 7" onclick="openModal(this.src)">
+            <img src="8.jpg" alt="Hình 8" onclick="openModal(this.src)">
+            <img src="9.jpg" alt="Hình 9" onclick="openModal(this.src)">
+            <img src="10.jpg" alt="Hình 10" onclick="openModal(this.src)">
+            <img src="11.jpg" alt="Hình 11" onclick="openModal(this.src)">
+            <img src="12.jpg" alt="Hình 12" onclick="openModal(this.src)">
+            <img src="13.jpg" alt="Hình 13" onclick="openModal(this.src)">
         </div>
+
+        <!-- Nút quay lại trang chủ -->
         <div class="back-home">
             <a href="index.html">QUAY VỀ TRANG CHỦ</a>
         </div>
     </div>
+
+    <!-- Modal for enlarged image -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+
 </body>
 
 </html>
