@@ -1,0 +1,351 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    /* Chiếm toàn bộ chiều ngang */
+    height: 30vh;
+    /* Chiều cao header chiếm 60% màn hình */
+    overflow: hidden;
+    /* Cắt nội dung thừa */
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    padding: 16px 22px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+.nava a:hover {
+    background-color: #1a43ca;
+}
+
+.nava {
+    margin-left: 315px;
+    margin-right: 315px;;
+}
+header video {
+    position: absolute;
+    top: 50%;
+    /* Đặt video ở giữa theo chiều dọc */
+    left: 50%;
+    /* Đặt video ở giữa theo chiều ngang */
+    transform: translate(-50%, -50%);
+    /* Căn chỉnh chính giữa */
+    min-width: 100%;
+    /* Video phải phủ hết chiều ngang */
+    min-height: 100%;
+    /* Video phải phủ hết chiều cao */
+    object-fit: cover;
+    /* Đảm bảo video không bị méo */
+    z-index: -1;
+    /* Đưa video ra sau nội dung */
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    /* Đưa nội dung ra trước video */
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 15px 10px;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    padding-top: 16px;
+    opacity: 0;
+    /* Ẩn chữ ban đầu */
+    animation: slideUp 2s ease forwards;
+    /* Gọi animation */
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        /* Chữ bắt đầu ở vị trí thấp hơn */
+        opacity: 0;
+        /* Ẩn chữ */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Chữ trượt về đúng vị trí */
+        opacity: 1;
+        /* Hiển thị chữ */
+    }
+}
+.content {
+    padding: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+h2 {
+    color: #2980b9;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pdf-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.pdf-list li {
+    margin: 1rem 0;
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pdf-list li:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+.pdf-list li a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.pdf-list li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Mới thêm vào: tạo các khung cho nội dung */
+.content-box {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.content-box:focus-within {
+    border: 2px solid lightgreen;
+    /* Đặt màu viền là màu xanh lá nhạt */
+    background-color: #eaf7e4;
+    /* Màu nền khi focus */
+}
+
+.content-box:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+.content-box a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.content-box a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Đặt màu đỏ cho tiêu đề "Bài giảng Toán" */
+h2 {
+    color: red;
+}
+
+/* Khẩn cần thêm phần ẩn nội dung môn học */
+.hidden {
+    display: none;
+}
+
+.sidebar-left,
+.sidebar-right {
+    position: fixed;
+    top: 25rem;
+    width: 15%;
+    background-image: url('https://gitiho.com/caches/p_medium_large//uploads/315313/images/image_hinh-nen-powerpoint-mau-hong-1-min(1).jpg');
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    height: 30%;
+    /* Chỉnh độ cao khung */
+    overflow-y: auto;
+    /* Cho phép cuộn nếu nội dung vượt quá chiều cao */
+}
+
+.sidebar-left {
+    left: 0;
+}
+
+.sidebar-right {
+    right: 0;
+}
+
+.sidebar-left h3,
+.sidebar-right h3 {
+    color: #2980b9;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sidebar-left ul,
+.sidebar-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-left li,
+.sidebar-right li {
+    margin: 1rem 0;
+}
+
+.sidebar-left li a,
+.sidebar-right li a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sidebar-left li a:hover,
+.sidebar-right li a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+footer {
+    color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer .social-icons {
+    margin: 20px 0;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffdd57;
+    transform: scale(1.2);
+}
+
+footer .links {
+    margin-bottom: 20px;
+}
+
+footer .links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+footer .links a:hover {
+    color: #ffdd57;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+ #backToTop {
+     display: none;
+     /* Ẩn nút ban đầu */
+     color: rgb(255, 255, 255);
+     /* Màu chữ */
+     border: none;
+     /* Không viền */
+     padding: 10px;
+     /* Kích thước nút */
+     cursor: pointer;
+     /* Con trỏ dạng tay */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     /* Đổ bóng */
+     font-size: 18px;
+     /* Kích thước chữ */
+     margin: auto;
+     display: flex;
+     width: 30%;
+     height: 80%;
+     justify-content: center;
+     align-items: center;
+     margin-top: 150px;
+     margin-bottom: -200px;
+     border-radius: 20px;
+     background-color: #333;
+ }
+
+ /* Hiệu ứng hover */
+ #backToTop:hover {
+     background-color: #575757;
+     /* Màu nền khi hover */
+ }
