@@ -152,7 +152,7 @@ nav a:hover {
 }
 
 .food-gallery img {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
