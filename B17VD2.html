@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về Pseudo-Elements trong CSS</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff6347, #42aaff, #20b2aa);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        .content {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            text-align: left;
+            color: #444;
+            transform: scale(0.98);
+            transition: transform 0.3s ease;
+        }
+
+        .content:hover {
+            transform: scale(1);
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #007bff;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        code {
+            background-color: #f4f7fc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #e7f3ff;
+        }
+
+        .back-home {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 14px 25px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #0056b3;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-home:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Pseudo-Element Styles */
+        .pseudo-example::before {
+            content: "🌟 ";
+            color: #ff6347;
+            font-size: 18px;
+        }
+
+        .pseudo-example::after {
+            content: " ⭐";
+            color: #42aaff;
+            font-size: 18px;
+        }
+
+        .first-line-example::first-line {
+            font-weight: bold;
+            color: #ff6347;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Tìm hiểu về Pseudo-Elements trong CSS</h1>
+
+            <p><strong>1. ::before</strong> - Dạng pseudo-element này cho phép bạn chèn nội dung vào phần tử trước nội dung chính của nó. Em có thể sử dụng nó để thêm các biểu tượng, ký hiệu hoặc phần tử trang trí trước một phần tử.</p>
+            <p>Ví dụ:</p>
+            <ul>
+                <li class="pseudo-example">Chèn biểu tượng trước nội dung</li>
+            </ul>
+
+            <p><strong>2. ::after</strong> - Dạng pseudo-element này cho phép bạn chèn nội dung vào phần tử sau nội dung chính của nó. Em có thể sử dụng nó để thêm các phần tử trang trí hoặc hiệu ứng sau một phần tử.</p>
+            <p>Ví dụ:</p>
+            <ul>
+                <li class="pseudo-example">Chèn biểu tượng sau nội dung</li>
+            </ul>
+
+            <p><strong>3. ::first-line</strong> - Dạng pseudo-element này cho phép bạn áp dụng các định dạng CSS cho dòng đầu tiên của một phần tử chứa nội dung văn bản. Em có thể sử dụng nó để thay đổi kiểu chữ, khoảng cách dòng, hoặc các thuộc tính khác cho dòng đầu tiên.</p>
+            <p class="first-line-example">Dòng này sẽ có định dạng đặc biệt ở dòng đầu tiên, thay đổi kiểu chữ và màu sắc cho dòng đầu tiên của đoạn văn.</p>
+
+            <a href="index.html" class="back-home">Quay lại trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
