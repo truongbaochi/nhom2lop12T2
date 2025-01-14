@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải thích CSS Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .content {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-home:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Giải thích sự khác nhau giữa hai định dạng CSS</h1>
+        <p><strong>Hai định dạng CSS "#p123+ p" và "h2#p123 + p" khác nhau về cách chọn phần tử HTML để áp dụng định dạng.</strong></p>
+
+        <p><strong>#p123+ p</strong>: Đây là một selector có kết hợp giữa ID selector và sibling combinator. Nó chọn các phần tử <code>p</code> là anh em liền kề (sibling) của phần tử có ID là "p123".</p>
+        <p>Ví dụ, nếu có cấu trúc HTML như sau:</p>
+        <img src="B16LT1anh1.png" alt="Ví dụ minh họa cho #p123+ p">
+        <p>Trong trường hợp này, định dạng CSS "#p123+ p" sẽ áp dụng cho phần tử <code>p</code> thứ hai, vì nó là anh em liền kề của phần tử có ID là "p123".</p>
+
+        <p><strong>h2#p123 + p</strong>: Đây là một selector có kết hợp giữa element selector (<code>h2</code>), ID selector và sibling combinator. Nó chọn các phần tử <code>p</code> là anh em liền kề của phần tử <code>h2</code> có ID là "p123".</p>
+        <p>Ví dụ, nếu có cấu trúc HTML như sau:</p>
+        <img src="B16LT1anh2.png" alt="Ví dụ minh họa cho h2#p123 + p">
+        <p>Trong trường hợp này, định dạng CSS "h2#p123 + p" sẽ áp dụng cho phần tử <code>p</code> thứ hai, vì nó là anh em liền kề của phần tử <code>h2</code> có ID là "p123".</p>
+
+        <a href="index.html" class="back-home">Quay lại trang chủ</a>
+    </div>
+</body>
+</html>
