@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về Pseudo-Classes trong CSS</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background: linear-gradient(135deg, #28a745, #007bff, #f39c12);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        .content {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            text-align: left;
+            color: #444;
+            transform: scale(0.98);
+            transition: transform 0.3s ease;
+        }
+
+        .content:hover {
+            transform: scale(1);
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #007bff;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        code {
+            background-color: #f4f7fc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #e7f3ff;
+        }
+
+        .back-home {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 14px 25px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #0056b3;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-home:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Tìm hiểu về Pseudo-Classes trong CSS</h1>
+
+            <p><strong>1. :hover</strong> - Dạng pseudo-class này được kích hoạt khi người dùng di chuột qua một phần tử. Nó cho phép bạn áp dụng các định dạng CSS khi phần tử đang được hover.</p>
+           
+            <p><strong>2. :active</strong> - Dạng pseudo-class này được kích hoạt khi phần tử đang được nhấn (khi người dùng giữ chuột trái). Em có thể sử dụng nó để áp dụng các định dạng CSS khi phần tử đang ở trạng thái active.</p>
+           
+            <p><strong>3. :focus</strong> - Dạng pseudo-class này được kích hoạt khi phần tử đang trong trạng thái focus (thường xảy ra khi người dùng click hoặc sử dụng phím tab để di chuyển đến phần tử). Em có thể sử dụng nó để áp dụng các định dạng CSS khi phần tử đang trong trạng thái focus.</p>
+           
+            <p><strong>4. :nth-child()</strong> - Dạng pseudo-class này cho phép bạn chọn các phần tử con trong một phần tử cha dựa trên vị trí của chúng. Bạn có thể sử dụng nó để áp dụng các định dạng CSS cho phần tử con cụ thể.</p>
+            
+
+            <a href="index.html" class="back-home">Quay lại trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
