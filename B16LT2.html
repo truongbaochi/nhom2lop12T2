@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải thích định dạng CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .content-wrapper {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-wrapper {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .back-home:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h2>Hãy giải thích ý nghĩa định dạng sau:</h2>
+        <div class="image-wrapper">
+            <!-- Chèn hình ảnh -->
+            <img src="b16lt2.png" alt="Mô tả hình ảnh" style="max-width: 100%; height: auto;">
+        </div>
+        <ul>
+            <li><strong>test.test_more:</strong> Đây là một bộ chọn đồng thời (class selector) áp dụng cho các phần tử có cả hai lớp tên là <code>test</code> và <code>test_more</code>. Điều này có nghĩa là chỉ các phần tử có cả hai lớp tên này sẽ được áp dụng định dạng.</li>
+            <li><strong>background-color: red;:</strong> Đây là thuộc tính CSS được sử dụng để đặt màu nền (<code>background-color</code>) của các phần tử được chọn. Trong trường hợp này, màu nền của các phần tử có lớp tên <code>test</code> và <code>test_more</code> sẽ được đặt là đỏ (<code>red</code>).</li>
+        </ul>
+        <p><strong>=&gt;</strong> Mẫu này sẽ áp dụng màu nền đỏ cho các phần tử thuộc lớp <code>test_more</code> với điều kiện các phần tử này là con hoặc cháu của một phần tử thuộc lớp <code>test</code>.</p>
+        <div style="text-align: center;">
+            <a href="index.html" class="back-home">Quay lại trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
