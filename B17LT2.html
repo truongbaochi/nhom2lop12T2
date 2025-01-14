@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .name {
+            font-style: italic; /* In nghiêng */
+            border: 1px solid #000; /* Đóng khung bằng đường viền màu đen */
+            padding: 2px; /* Thêm đệm xung quanh nội dung để không quá sát viền */
+            display: inline-block; /* Đảm bảo viền ôm sát nội dung */
+            margin: 5px 0;
+            background-color: #f9f9f9;
+        }
+
+        .back-home {
+            display: inline-block;
+            background-color: #0069d9;
+            color: white;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .back-home:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .back-home:active {
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+
+            <p><strong>Trong phần Thực hành, các tên riêng (tên người, tên tổ chức) cần được bổ sung định dạng đóng khung và in nghiêng. Em sẽ thực hiện các yêu cầu này như thế nào?</strong></p>
+
+            <p>Để thực hiện các yêu cầu này, em có thể sử dụng đoạn mã CSS sau:</p>
+            <pre><code>
+.name {
+  font-style: italic; /* In nghiêng */
+  border: 1px solid #000; /* Đóng khung bằng đường viền màu đen */
+  padding: 2px; /* Thêm đệm xung quanh nội dung để không quá sát viền */
+  display: inline-block; /* Đảm bảo viền ôm sát nội dung */
+}
+            </code></pre>
+
+            <a href="index.html" class="back-home">Quay lại trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
