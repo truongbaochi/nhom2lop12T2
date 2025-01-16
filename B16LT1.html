@@ -5,40 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Câu hỏi về HTML và CSS</title>
     <style>
+        /* Cấu trúc cơ bản */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* Câu hỏi */
         .question {
             margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 20px;
+            border-radius: 8px;
             background-color: #f9f9f9;
+            transition: box-shadow 0.3s ease;
         }
-        .back-to-top {
+
+        .question:hover {
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+        }
+
+        .question p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .question ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .question ul li {
+            padding: 8px 0;
+            font-size: 1rem;
+        }
+
+        .question ul li code {
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: Consolas, 'Courier New', monospace;
+        }
+
+        /* Nút quay về */
+        .back-to-home {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 15px;
+            margin: 20px 0;
+            padding: 12px 20px;
             text-decoration: none;
-            background-color: #007bff;
+            font-size: 1rem;
             color: #fff;
-            border-radius: 5px;
+            background-color: #007bff;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        .back-to-top:hover {
+
+        .back-to-home:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Căn chỉnh liên kết */
+        .back-to-home-container {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="question">
-        <p><strong>Câu 1.</strong> Phần tử HTML có thể ẩn đi trên trang web được không? Nếu có thì dùng lệnh CSS gì?</p>
-        <ul>
-            <li>Có thể</li>
-            <li>Để ẩn phần tử HTML trên trang web, cần thiết lập CSS với thuộc tính <code>display</code> có giá trị <code>none</code>.</li>
-        </ul>
+    <div class="container">
+        <h1>Câu hỏi về HTML và CSS</h1>
+
+        <div class="question">
+            <p><strong>Câu 1:</strong> Phần tử HTML có thể ẩn đi trên trang web được không? Nếu có thì dùng lệnh CSS gì?</p>
+            <ul>
+                <li>Có thể</li>
+                <li>Để ẩn phần tử HTML trên trang web, cần thiết lập CSS với thuộc tính <code>display</code> có giá trị <code>none</code>.</li>
+            </ul>
+        </div>
+
+        <div class="back-to-home-container">
+            <a href="index.html" class="back-to-home">Quay về trang chủ</a>
+        </div>
     </div>
-            <a href="index.html" class="button">QUAY VỀ TRANG CHỦ</a>
 </body>
 </html>
