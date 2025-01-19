@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu Lạc Bộ NGHỆ THUẬT</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("https://i.pinimg.com/736x/1b/6c/a0/1b6ca02ec68eb59e61dabe8bd5ac563d.jpg") no-repeat center center fixed;
+            background-size: cover; /* Đảm bảo hình nền phủ toàn bộ */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center; /* Căn giữa tất cả nội dung */
+        }
+
+        /* Header Fullscreen với Gradient, chiều cao thu nhỏ */
+        header {
+            background: linear-gradient(to right, #ff7675, #fab1a0);
+            height: 30vh; /* Thu nhỏ chiều cao của header */
+            width: 100%; /* Full chiều rộng */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 50px; /* Thu nhỏ kích thước font */
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            margin: 0;
+        }
+
+        header p {
+            font-size: 20px; /* Thu nhỏ kích thước font */
+            font-weight: 300;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Các phần tử trong trang */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa nội dung trong container */
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: #f39c12;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Chỉnh CSS cho sport-list để 3 cột mỗi hàng */
+        .sport-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
+            gap: 20px; /* Khoảng cách giữa các item */
+            justify-items: center; /* Căn giữa các item trong mỗi cột */
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .sport-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 300px; /* Giới hạn chiều rộng tối đa cho mỗi khung */
+        }
+
+        .sport-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .sport-item h3 {
+            margin-top: 15px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .sport-item p {
+            color: #7f8c8d;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Back-home button, cố định ở cuối trang */
+.back-home {
+    position: fixed;
+    bottom: 20px; /* Cố định nút ở dưới cùng của trang */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Căn giữa hoàn hảo */
+    padding: 20px 40px;
+    border: 2px solid #e74c3c;
+    border-radius: 30px;
+    background: linear-gradient(to right, #e74c3c, #f39c12);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Đảm bảo nút luôn ở trên các phần tử khác */
+    transition: none; /* Xóa mọi hiệu ứng chuyển động */
+}
+
+/* Đảm bảo không có hiệu ứng hover */
+.back-home:hover {
+    background: linear-gradient(to right, #e74c3c, #f39c12); /* Không thay đổi màu nền khi hover */
+    transform: translateX(-50%); /* Giữ vị trí cố định khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Giữ bóng đổ nguyên */
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Câu Lạc Bộ Nghệ Thuật - Khám Phá Sự Sáng Tạo</h1>
+    <p>Tham gia câu lạc bộ để phát triển tài năng nghệ thuật của bạn qua các môn học vẽ, hát, múa và nhiều hơn nữa.</p>
+</header>
+
+<div class="container">
+    <section class="section">
+        <h2>Các Môn Nghệ thuật Bao Gồm</h2>
+        <div class="sport-list">
+            <div class="sport-item">
+                <img src="https://arcline.edu.vn/wp-content/uploads/2023/06/Tinh-vat-lop-9-3-1700x956.jpg" alt="Môn thể thao đốt calo">
+               <h3>Vẽ</h3>
+                <p>Khám phá thế giới màu sắc và hình khối qua các lớp học vẽ dành cho mọi độ tuổi. Từ vẽ tranh sơn dầu đến tranh màu nước, mỗi học viên sẽ tìm thấy phong cách riêng của mình.</p>
+            </div>
+            <div class="sport-item">
+                <img src="https://cdn.popsww.com/blog-kids/sites/3/2022/11/bai-hat-ve-gio-1.jpg" alt="Bóng Rổ">
+ <h3>Hát</h3>
+                <p>Tham gia các lớp hát để rèn luyện giọng hát và kỹ thuật thanh nhạc. Từ nhạc pop đến cổ điển, bạn sẽ được hướng dẫn bởi các giáo viên giàu kinh nghiệm.</p>
+            </div>
+            <div class="sport-item">
+                <img src="https://i.ytimg.com/vi/jtlQMaRMcA8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBoyJmIH13J_rjJSAIBmMI8c6daHw" alt="Bóng Chuyền">
+                <h3>Múa</h3>
+                <p>Múa là sự kết hợp giữa cảm xúc và chuyển động. Tham gia các lớp múa ballet, múa hiện đại và múa dân gian để phát triển khả năng biểu cảm và thể chất của bạn.</p>
+            </div>
+            <div class="sport-item">
+                <img src="https://img.cand.com.vn/resize/800x800/NewFiles/Images/2021/10/24/sk-1635046249009.jpg" alt="Bơi Lội">
+                            <h3>Kịch</h3>
+                <p>Kịch là nghệ thuật diễn xuất và biểu cảm. Bạn sẽ được học cách hóa thân vào các nhân vật, phát triển kỹ năng diễn xuất và tự tin hơn khi đứng trên sân khấu.</p>
+            </div>
+            <div class="sport-item">
+                <img src="https://i.ytimg.com/vi/JiFb1tJ3tJ8/maxresdefault.jpg" alt="Cầu Lông">
+                <h3>Thủ Công</h3>
+                <p>Khám phá thế giới thủ công qua các lớp học làm đồ handmade, từ gốm sứ đến các món đồ trang trí. Học hỏi cách tạo ra những sản phẩm độc đáo và sáng tạo.</p>
+            </div>
+            <div class="sport-item">
+                <img src="https://cdn1.123job.vn/123job/uploads/2021/10/27/2021_10_27______3968e5768146a5ab72169c09c8e3bf82.jpeg" alt="Đá Cầu">
+                 <h3>Nhiếp Ảnh</h3>
+                <p>Nhiếp ảnh là cách để ghi lại những khoảnh khắc đẹp trong cuộc sống. Tham gia lớp học nhiếp ảnh để học các kỹ thuật chụp ảnh chuyên nghiệp và sáng tạo.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Back-home button -->
+  <div style="text-align: center;">
+    <a href="B18VD.html" class="back-home">Quay về trang thông tin</a>
+  </div>
+
+</body>
+</html>
