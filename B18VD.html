@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f6f7;
+            color: #333;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, rgba(255, 87, 34, 0.8), rgba(33, 150, 243, 0.8)), url("B18LT_anhbia.png") no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            animation: slideIn 2s ease-out;
+            background-position: center;  /* Tạo hiệu ứng động cho hình nền */
+ width: 100%;
+
+            transition: background-position 1s ease-out;
+        }
+
+        .banner:hover {
+            background-position: top;  /* Khi hover sẽ thay đổi vị trí hình nền */
+        }
+
+        .banner h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+.top-container, .footer, .slogan {
+    width: 100%;
+}
+        .register {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 20px;
+            background: #6200ea;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .register a {
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 12px 30px;
+            background-color: #6200ea;
+            border-radius: 30px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .register a:hover {
+            background-color: #3700b3;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .slogan {
+            background: linear-gradient(135deg, #ff7a18, #af002d, #320b86);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: slideUp 1s ease-out;
+        }
+
+        .slogan:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            height: 110%;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slogan .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            z-index: 2;
+        }
+
+        .block_3 {
+            margin: 1.5rem;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .block_3:hover {
+            transform: translateY(-10px) scale(1.1);
+        }
+
+        .block_3 h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .block_3 p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: 300;
+        }
+
+        .content {
+            margin: 4rem auto;
+            padding: 2rem;
+            max-width: 1200px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table td {
+            vertical-align: middle;
+            padding: 2rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        table td:hover {
+            background-color: #f1f3f5;
+            transform: translateY(-5px);
+        }
+
+        table td img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        table td h3 {
+            color: #64B5F6; /* Màu xanh dương sáng */
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        table td h3:hover {
+            color: #81D4FA; /* Màu xanh dương sáng nhạt */
+        }
+
+        .detail-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 12px 30px;
+            background-color: #6200ea;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .detail-link:hover {
+            background-color: #3700b3;
+            transform: translateY(-5px);
+        }
+
+        .back-home {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 12px 24px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            border-top: 5px solid #64B5F6; /* Màu xanh dương sáng */
+        }
+
+        .footer .footer-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer .footer-column {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #4CAF50; /* Màu xanh dương sáng */
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .footer a {
+            color: #64B5F6; /* Màu xanh dương sáng */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #81D4FA; /* Màu xanh dương sáng nhạt */
+        }
+
+        .footer .social-icons {
+            margin: 20px 0;
+        }
+
+        .footer .social-icons a {
+            margin: 0 15px;
+            font-size: 1.5rem;
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: #64B5F6; /* Màu xanh dương sáng */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+   .moving-text {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff; /* Đảm bảo màu chữ trắng */
+            background-color: #6200ea;
+            padding: 10px 20px;
+            border-radius: 30px;
+            animation: bounce 1s ease-in-out infinite;
+            margin: 0 auto;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .moving-text a {
+            color: #fff; /* Đảm bảo màu chữ trắng trong thẻ a */
+            text-decoration: none; /* Loại bỏ gạch chân */
+        }
+
+        @keyframes bounce {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(10px); }
+            50% { transform: translateX(-10px); }
+            75% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1><b>CLB ngoại khóa trường THPT Nguyễn Bỉnh Khiêm</b></h1>
+    </div>
+
+    <!-- Slogan -->
+    <div class="slogan">
+        <div class="row">
+            <div class="block_3">
+                <h3>Năng động</h3>
+                <p>Hoạt động năng nổ và hiệu quả</p>
+            </div>
+            <div class="block_3">
+                <h3>Đam mê</h3>
+                <p>Cháy hết mình trong các cuộc chơi</p>
+            </div>
+            <div class="block_3">
+                <h3>Tỏa sáng</h3>
+                <p>Giành những giải thưởng cao nhất</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nội dung các CLB -->
+    <div class="content">
+        <table>
+            <tr>
+                <td>
+                    <h3>Học siêu - Chơi đỉnh</h3>
+                    <p>Trường THPT Nguyễn Bình Khiêm cung cấp nguồn năng lượng dồi dào, mạnh mẽ để giúp học sinh không chỉ học tập một cách thú vị, sáng tạo mà còn thể hiện phong cách cá nhân thật ấn tượng trong mỗi hoạt động vui chơi.</p>
+                    <p>Với sự kết hợp hoàn hảo giữa việc học và vui chơi, học sinh sẽ phát triển toàn diện về trí tuệ và thể chất, đồng thời tạo dựng những kỷ niệm đáng nhớ trong quá trình trưởng thành.</p>
+                    <p>Nhà trường luôn đồng hành cùng học sinh, mang đến những trải nghiệm học tập tuyệt vời, đầy niềm vui và sự phấn khích, giúp ta tự tin thể hiện bản thân ở mọi nơi, mọi lúc.</p>
+                </td>
+                <td>
+                    <img src="B18LT_anh0.png" alt="Học siêu - Chơi đỉnh">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="B18LT_thethao.png" alt="Thể thao">
+                </td>
+                <td>
+                    <h3>CLB - Thể thao</h3>
+                    <p>CLB thể thao trường THPT Nguyễn Bỉnh Khiêm đã hoạt động sôi nổi trong nhiều năm qua, đạt rất nhiều giải trong và ngoài tỉnh.</p>
+                    <a href="B18LT1_CLBTHETHAO.html" class="detail-link">Chi tiết</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>CLB - Nghệ thuật</h3>
+                    <p>Phong trào văn nghệ trường THPT Nguyễn Bỉnh Khiêm hoạt động rất nhiệt tình và hiệu quả, các ca sĩ là các em học sinh đã đạt nhiều giải cấp tỉnh.</p>
+                    <a href="B18LT1_CLBNGHETHUAT.html" class="detail-link">Chi tiết</a>
+                </td>
+                <td>
+                    <img src="B18LT_nghethuat.png" alt="Nghệ thuật">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Đăng ký (Nổi bật) -->
+<div class="moving-text">
+    <a href="B18LT_dang_ki.html">
+        <h2><b>Đăng ký các CLB tại đây!</b></h2>
+    </a>
+</div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-home">Quay về trang chủ</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-row">
+            <div class="footer-column">
+                <h3>Liên hệ</h3>
+                <p>Mọi chi tiết xin liên hệ trường THPT Nguyễn Bỉnh Khiêm<br/>
+                Địa chỉ: Phú Hội, Nhơn Trạch District, Dong Nai, Vietnam<br/>
+                Email: c3.nguyenbinhkhiem@dongnai.edu.vn<br/>
+                Website:  <a href="https://thptnguyenbinhkhiem.edu.vn/">https://thptnguyenbinhkhiem.edu.vn</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Bản quyền</h3>
+                <p>Bản quyền thuộc về trường THPT Nguyễn Bỉnh Khiêm</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liên kết</h3>
+                <p>
+                <a href="B18LT1_CLBTHETHAO.html">Trang Thể thao</a><br/>
+                <a href="B18LT1_CLBNGHETHUAT.html">Trang Nghệ thuật</a><br/>
+                <a href="B18LT_dang_ki.html">Đăng ký CLB</a><br/>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
