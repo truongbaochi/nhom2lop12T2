@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("B18LT_anhbia.png") no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .banner h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .register {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .register a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .register a:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .slogan {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 4rem 2rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .slogan .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .block_3 {
+            margin: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .block_3:hover {
+            transform: translateY(-10px);
+        }
+
+        .content {
+            margin: 3rem auto;
+            padding: 2rem;
+            max-width: 1200px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table td {
+            vertical-align: middle;
+            padding: 2rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        table td:hover {
+            background-color: #e9ecef;
+        }
+
+        table td img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        table td h3 {
+            color: #007bff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 12px 24px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            border-top: 5px solid #4CAF50;
+        }
+
+        .footer .footer-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer .footer-column {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: red;
+        }
+
+        .footer .social-icons {
+            margin: 20px 0;
+        }
+
+        .footer .social-icons a {
+            margin: 0 15px;
+            font-size: 1.5rem;
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: #4CAF50;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1><b>CLB ngoại khóa trường THPT Nguyễn Bỉnh Khiêm</b></h1>
+    </div>
+
+    <!-- Đăng ký -->
+    <div class="register">
+        <a href="B18LT_dang_ki.html">
+            <h2><b>Đăng ký tham gia các CLB của trường THPT Nguyễn Bỉnh Khiêm</b></h2>
+        </a>
+    </div>
+
+    <!-- Nội dung các CLB -->
+    <div class="content">
+        <table>
+            <tr>
+                <td>
+                    <h3>Học siêu - Chơi đỉnh</h3>
+                    <p>Trường THPT Nguyễn Bình Khiêm cung cấp nguồn năng lượng dồi dào, mạnh mẽ để giúp học sinh không chỉ học tập một cách thú vị, sáng tạo mà còn thể hiện phong cách cá nhân thật ấn tượng trong mỗi hoạt động vui chơi.</p>
+                    <p>Với sự kết hợp hoàn hảo giữa việc học và vui chơi, học sinh sẽ phát triển toàn diện về trí tuệ và thể chất, đồng thời tạo dựng những kỷ niệm đáng nhớ trong quá trình trưởng thành.</p>
+                    <p>Nhà trường luôn đồng hành cùng học sinh, mang đến những trải nghiệm học tập tuyệt vời, đầy niềm vui và sự phấn khích, giúp ta tự tin thể hiện bản thân ở mọi nơi, mọi lúc.</p>
+                </td>
+                <td>
+                    <img src="B18LT_anh0.png" alt="Học siêu - Chơi đỉnh">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="B18LT_thethao.png" alt="Thể thao">
+                </td>
+                <td>
+                    <h3>CLB - Thể thao</h3>
+                    <p>CLB thể thao trường THPT Nguyễn Bỉnh Khiêm đã hoạt động sôi nổi trong nhiều năm qua, đạt rất nhiều giải trong và ngoài tỉnh.</p>
+                    <a href="B12VD2_CLBTHETHAO.html">Chi tiết</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>CLB - Nghệ thuật</h3>
+                    <p>Phong trào văn nghệ trường THPT Nguyễn Bỉnh Khiêm hoạt động rất nhiệt tình và hiệu quả, các ca sĩ là các em học sinh đã đạt nhiều giải cấp tỉnh.</p>
+                    <a href="B12VD2_CLBNGHETHUAT.html">Chi tiết</a>
+                </td>
+                <td>
+                    <img src="B18LT_nghethuat.png" alt="Nghệ thuật">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-home">Quay về trang chủ</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-row">
+            <div class="footer-column">
+                <h3>Liên hệ</h3>
+                <p>Mọi chi tiết xin liên hệ trường THPT Nguyễn Bỉnh Khiêm<br/>
+               
+Địa chỉ: Phú Hội, Nhơn Trạch District, Dong Nai, Vietnam<br/>
+Email: c3.nguyenbinhkhiem@dongnai.edu.vn<br/>
+Website: https://thptnguyenbinhkhiem.edu.vn/</>
+            </div>
+            <div class="footer-column">
+                <h3>Bản quyền</h3>
+                <p>Bản quyền thuộc về trường THPT Nguyễn Bỉnh Khiêm</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liên kết</h3>
+                <p>
+                <a href="B12VD2_CLBTHETHAO.html">Trang Thể thao</a><br/>
+                <a href="B12VD2_CLBNGHETHUAT.html">Trang Nghệ thuật</a>
+                </p>
+            </div>
+        </div>
+
+</body>
+</html>

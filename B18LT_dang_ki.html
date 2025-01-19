@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <style>
+        table {
+            padding: 20px;
+            border: 2px solid blue;
+            margin-left: 38.5%;
+            margin-right: 30%;
+            background-color: lightyellow;
+        }
+    
+        td {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .back-home:hover {
+      background-color: #4CAF50;
+      color: #ffffff;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <form>
+            <tr>
+                <td colspan="2" align="center">
+                    <h3>ĐĂNG KÍ THÀNH VIÊN CLB NGOẠI KHÓA<br>TRƯỜNG THPT Nguyễn Bỉnh Khiêm</h3>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Họ tên:</label></td>
+                <td><input type="text" id="hoten"></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label>Ngày sinh:</label></td>
+                <td><input type="date" id="ngaysinh"></td>
+            </tr>
+            <tr>
+                <td><label>Địa chỉ:</label></td>
+                <td><textarea id="diachi" name="diachi" rows=5 cols=20></textarea></td>
+            </tr>
+            <tr>
+                <td><label>Giới tính:</label></td>
+                <td>
+                    <input type="radio" id="Nam" name="gioitinh"><label>Nam</label><br>
+                    <input type="radio" id="Nữ" name="gioitinh"><label>Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Sở thích:</label></td>
+                <td>
+                    <input type="checkbox" name="sothich"><label>Cờ vua</label><br>
+                    <input type="checkbox" name="sothich"><label>Trò chơi điện tử</label><br>
+                    <input type="checkbox" name="sothich"><label>Du lịch</label><br>
+                    <input type="checkbox" name="sothich"><label>Cắm hoa</label><br>
+                    <input type="checkbox" name="sothich"><label>Nấu ăn</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Hồ sơ đính kèm:</label></td>
+                <td><input type="file" id="hoso" name="hoso" value="Lý lịch"></td>
+            </tr>
+            <tr>
+                <td><label>Đăng kí CLB:</label></td>
+                <td>
+                    <select id="thethao" name="thethao">
+                        <option value="bongda">Bóng đá</option>
+                        <option value="bongban">Bóng bàn</option>
+                        <option value="bongro">Bóng rổ</option>
+                        <option value="bongchuyen">Bóng chuyền</option>
+                        <option value="caulong">Cầu lông</option>
+                        <option value="boiloi">Bơi lội</option>
+                        <option value="vothuat">Võ thuật</option>
+                        <option value="nhiepanh">Nhiếp ảnh</option>
+                        <option value="amnhac">Âm nhạc</option>
+                        <option value="khieuvu">Khiêu vũ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Đăng kí"></td>
+            </tr>
+        </form>
+    </table>
+  <div style="text-align: center;">
+    <a href="B18LT.html" class="back-home">Quay về trang thông tin</a>
+  </div>
+</body>
+</html>
