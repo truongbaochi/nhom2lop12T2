@@ -185,7 +185,31 @@ table a:hover {
         transform: translateX(5px); /* Dịch mũi tên qua phải */
     }
 }
+ /* Định dạng tiêu đề */
+    .table-title {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        background-color: blue;
+        padding: 10px 20px;
+        margin: 30px auto 10px;
+        width: fit-content;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        border: 3px solid transparent;
+        animation: border-animation 2s infinite;
+    }
 
+    /* Hiệu ứng viền chạy */
+    @keyframes border-animation {
+        0% { border-color: red; }
+        25% { border-color: yellow; }
+        50% { border-color: blue; }
+        75% { border-color: green; }
+        100% { border-color: red; }
+    }
     </style>
 
 
@@ -218,6 +242,24 @@ table a:hover {
 	<div class="arrow-text">
     <span>Kéo xuống để xem web nhóm thiết kế</span>
 </div>
+<div class="table-title">Chủ đề: Hướng nghiệp với tin học</div>
+   <table>
+        <thead>
+            <tr>
+                <th>Bài</th>
+                <th>Liên Kết</th>
+            </tr>
+        </thead>
+            <tr>
+                <td>Bài 19. Dịch vụ sửa chữa vào bảo trì máy tính<br>
+		Bài 20. Nhóm nghề quản trị trong ngành Công nghệ thông tin</td>
+                <td>
+                    <a href="https://www.canva.com/design/DAGeJd1lkt4/II-MVqh-3azoTbV3e0xVCQ/edit?utm_content=DAGeJd1lkt4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Link canva bài 19, 20</a><br>
+                </td>
+            </tr>
+	</table>
+
+<div class="table-title">Chủ đề: HTML - CSS</div>
 
     <!-- Bảng nội dung -->
     <table>
